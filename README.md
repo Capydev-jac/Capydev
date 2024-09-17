@@ -4,8 +4,13 @@
 A CapyDev é uma equipe de desenvolvedores criada em 2024 por um grupo de estudantes da Fatec Jacareí apaixonados por tecnologia e inovação. Inspirados pela resiliência das Capivaras, animal símbolo da equipe, os decidiram unir suas habilidades de desenvolvimento de software, Design digital, Gerenciamento de dados, entre outros conhecimentos, para resolver problemas de maneira eficiente e colaborativa.
 A CapyDev rapidamente chamou a atenção da TechFlow. Impressionada pelas capacidades técnicas e criativas da equipe, a TechFlow contratou a CapyDev para trabalhar em um projeto ambicioso: Criar um site de treinamento do método Scrum.</p>
 
+<h2 align="center">Sobre o Projeto</h2>
+
+<p align="center"> Desenvolver e entregar um curso interativo que ensine a metodologia Scrum, cobrindo seus princípios, práticas e papel dos membros da equipe, com o objetivo de capacitar os participantes a implementar Scrum em seus próprios projetos de forma eficaz.
+O curso sobre Scrum será composto por uma série de módulos, cada um abordando diferentes aspectos da metodologia Scrum. Ele incluirá materiais teóricos, atividades práticas e avaliações para garantir a compreensão dos participantes. O curso será oferecido em formato presencial ou online, dependendo das necessidades e preferências do público-alvo.</p>
+
 <h2>Product Backlog</h2>
- 
+
 | Numero | Prioridade | Função |
 | ------ | ---------- | ------ |
 |**Requisitos Funcionais:**|
