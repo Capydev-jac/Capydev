@@ -9,6 +9,14 @@ A CapyDev rapidamente chamou a atenção da TechFlow. Impressionada pelas capaci
 <p align="center"> Desenvolver e entregar um curso interativo que ensine a metodologia Scrum, cobrindo seus princípios, práticas e papel dos membros da equipe, com o objetivo de capacitar os participantes a implementar Scrum em seus próprios projetos de forma eficaz.
 O curso sobre Scrum será composto por uma série de módulos, cada um abordando diferentes aspectos da metodologia Scrum. Ele incluirá materiais teóricos, atividades práticas e avaliações para garantir a compreensão dos participantes. O curso será oferecido em formato presencial ou online, dependendo das necessidades e preferências do público-alvo.</p>
 
+<h2>Sprints</h2>
+
+| Sprints | Início | Fim | Relatorio |
+| ------- | ------ | --- | --------- |
+| 1ª sprint | 10/09/2024 | 04/10/2024 | Ver |
+| 2ª sprint | 07/10/2024 | 01/11/2024 | Ver |
+| 3ª sprint | 04/11/2024 | 22/11/2024 | Ver |
+
 <h2>Product Backlog</h2>
 
 | Prioridade | Função |
@@ -31,11 +39,3 @@ O curso sobre Scrum será composto por uma série de módulos, cada um abordando
 | Média | As páginas devem ser organizadas em uma sequência lógica para o aprendizado do Scrumcom um mecanismo para o usuário navegar para a próxima página e página anterior; |
 | Média | O curso deve seguir uma sequência lógica necessária para o aprendizado do Scrum; |
 | Média | As questões devem ser compatíveis com o conteúdo apresentado no tópico; |
-
-<h2>Prazos das Sprints</h2>
-
-| Sprints | Início | Fim | Relatorio |
-| ------- | ------ | --- | --------- |
-| 1ª sprint | 10/09/2024 | 04/10/2024 | Ver |
-| 2ª sprint | 07/10/2024 | 01/11/2024 | Ver |
-| 3ª sprint | 04/11/2024 | 22/11/2024 | Ver |
