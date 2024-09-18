@@ -27,7 +27,7 @@ O curso sobre Scrum será composto por uma série de módulos, cada um abordando
 |**Requisitos Não Funcionais:**|
 | Alta | O curso deve cobrir os conhecimentos necessários para o aprendizado do Scrum; |
 | Alta | O visual deve ser responsivo. |
-| Média| Os conteúdos devem ser distribuídos em páginas atendendo aos princípios de arquiteturade informação; |
+| Média | Os conteúdos devem ser distribuídos em páginas atendendo aos princípios de arquiteturade informação; |
 | Média | As páginas devem ser organizadas em uma sequência lógica para o aprendizado do Scrumcom um mecanismo para o usuário navegar para a próxima página e página anterior; |
 | Média | O curso deve seguir uma sequência lógica necessária para o aprendizado do Scrum; |
 | Média | As questões devem ser compatíveis com o conteúdo apresentado no tópico; |
