@@ -21,21 +21,21 @@ O curso sobre Scrum será composto por uma série de módulos, cada um abordando
 | Alta  | As questões devem ser cadastradas pelo administrador diretamente no SGBD PostgreSQL. |
 | Média | Aos usuários logados, o sistema deve exibir 3 questões para cada tópico. As questões devemcontemplar o tema abordado no tópico; |
 | Média | O usuário não logado pode acessar o conteúdo das páginas (tópicos) do curso, mas nãopode visualizar as questões; |
-| Média | O sistema deve exibir as questões somente nos tópicos que o usuário não tenha sidoaprovado. Para ser considerado aprovado no tópico é necessário acertar pelo menos 2 questões; |
+| Média | O sistema deve exibir as questões somente nos tópicos que o usuário não tenha sidoaprovado. Para ser considerado aprovado no tópico é necessário acertar pelo menos 2questões; |
 | Média | O sistema deve ser capaz de emitir o certificado de conclusão para os usuários que foramaprovados em todos os tópicos; |
 | Baixa | O usuário pode tentar responder as questões quantas vezes ele quiser até obter êxito; |
 |**Requisitos Não Funcionais:**|
-| Alta | As páginas devem ser organizadas em uma sequência lógica para o aprendizado do Scrumcom um mecanismo para o usuário navegar para a próxima página e página anterior; |
 | Alta | O curso deve cobrir os conhecimentos necessários para o aprendizado do Scrum; |
-| Alta | O curso deve seguir uma sequência lógica necessária para o aprendizado do Scrum; |
-| Média | As questões devem ser compatíveis com o conteúdo apresentado no tópico; |
+| Alta | O visual deve ser responsivo. |
 | Média | Os conteúdos devem ser distribuídos em páginas atendendo aos princípios de arquiteturade informação; |
-| Média | O visual deve ser responsivo. |
+| Média | As páginas devem ser organizadas em uma sequência lógica para o aprendizado do Scrumcom um mecanismo para o usuário navegar para a próxima página e página anterior; |
+| Média | O curso deve seguir uma sequência lógica necessária para o aprendizado do Scrum; |
+| Média | As questões devem ser compatíveis com o conteúdo apresentado no tópico; |
 
 <h2>Prazos das Sprints</h2>
 
-| Sprints | Início | Fim | Relatorios |
-| ------- | ------ | --- | ---------- |
+| Sprints | Início | Fim | Relatorio |
+| ------- | ------ | --- | --------- |
 | 1ª sprint | 10/09/2024 | 04/10/2024 | Ver |
 | 2ª sprint | 07/10/2024 | 01/11/2024 | Ver |
 | 3ª sprint | 04/11/2024 | 22/11/2024 | Ver |
