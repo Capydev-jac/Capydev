@@ -11,11 +11,11 @@ O curso sobre Scrum será composto por uma série de módulos, cada um abordando
 
 <h2>Sprints</h2>
 
-| Sprints | Início | Fim | Relatorio |
-| ------- | ------ | --- | --------- |
-| 1ª sprint | 10/09/2024 | 04/10/2024 | Ver |
-| 2ª sprint | 07/10/2024 | 01/11/2024 | Ver |
-| 3ª sprint | 04/11/2024 | 22/11/2024 | Ver |
+| Sprints | Início | Fim |
+| ------- | ------ | --- |
+| 1ª sprint | 10/09/2024 | 04/10/2024 |
+| 2ª sprint | 07/10/2024 | 01/11/2024 |
+| 3ª sprint | 04/11/2024 | 22/11/2024 |
 
 <h2>Product Backlog</h2>
 
@@ -39,3 +39,13 @@ O curso sobre Scrum será composto por uma série de módulos, cada um abordando
 | Média | As páginas devem ser organizadas em uma sequência lógica para o aprendizado do Scrumcom um mecanismo para o usuário navegar para a próxima página e página anterior; |
 | Média | O curso deve seguir uma sequência lógica necessária para o aprendizado do Scrum; |
 | Média | As questões devem ser compatíveis com o conteúdo apresentado no tópico; |
+
+<h2>Ferramentas Utilizadas</h2>
+<div>
+  <a href="https://github.com/"><img src="https://github.com/Felipe-ACG/Capydev/blob/main/images/githublogo.png", width="40", heigth="40"></a>
+  <a href="https://www.figma.com/"><img src="https://github.com/Felipe-ACG/Capydev/blob/main/images/figmalogo.png", width="40", heigth="40"></a>
+  <a href="https://trello.com/"><img src="https://github.com/Felipe-ACG/Capydev/blob/main/images/trellologo.png", width="40", heigth="40"></a>
+  <a href="https://www.pgadmin.org/"><img src="https://github.com/Felipe-ACG/Capydev/blob/main/images/pgadminlogo.png", width="40", heigth="40"></a>
+  <a href="https://www.dbdesigner.net/"><img src="https://github.com/Felipe-ACG/Capydev/blob/main/images/dbdesignerlogo.png", width="40", heigth="40"></a>
+  <a href="https://code.visualstudio.com/"><img src="https://github.com/Felipe-ACG/Capydev/blob/main/images/vscodelogo.png", width="40", heigth="40"></a>
+</div>
