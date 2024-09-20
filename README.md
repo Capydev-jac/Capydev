@@ -42,10 +42,13 @@ O curso sobre Scrum será composto por uma série de módulos, cada um abordando
 
 <h2>Ferramentas Utilizadas</h2>
 <div>
-  <a href="https://github.com/"><img src="https://github.com/Felipe-ACG/Capydev/blob/main/images/githublogo.png", width="40", heigth="40"></a>
-  <a href="https://www.figma.com/"><img src="https://github.com/Felipe-ACG/Capydev/blob/main/images/figmalogo.png", width="40", heigth="40"></a>
-  <a href="https://trello.com/"><img src="https://github.com/Felipe-ACG/Capydev/blob/main/images/trellologo.png", width="40", heigth="40"></a>
-  <a href="https://www.pgadmin.org/"><img src="https://github.com/Felipe-ACG/Capydev/blob/main/images/pgadminlogo.png", width="40", heigth="40"></a>
-  <a href="https://www.dbdesigner.net/"><img src="https://github.com/Felipe-ACG/Capydev/blob/main/images/dbdesignerlogo.png", width="40", heigth="40"></a>
-  <a href="https://code.visualstudio.com/"><img src="https://github.com/Felipe-ACG/Capydev/blob/main/images/vscodelogo.png", width="40", heigth="40"></a>
+  <a href="https://github.com/" target="_blank"><img src="https://github.com/Felipe-ACG/Capydev/blob/main/images/githublogo.png", width="40", heigth="40"></a>
+  <a href="https://www.figma.com/" target="_blank"><img src="https://github.com/Felipe-ACG/Capydev/blob/main/images/figmalogo.png", width="40", heigth="40"></a>
+  <a href="https://trello.com/" target="_blank"><img src="https://github.com/Felipe-ACG/Capydev/blob/main/images/trellologo.png", width="40", heigth="40"></a>
+  <a href="https://www.pgadmin.org/" target="_blank"> <img src="https://github.com/Felipe-ACG/Capydev/blob/main/images/pgadminlogo.png", width="40", heigth="40"></a>
+  <a href="https://www.dbdesigner.net/" target="_blank"><img src="https://github.com/Felipe-ACG/Capydev/blob/main/images/dbdesignerlogo.png", width="40", heigth="40"></a>
+  <a href="https://code.visualstudio.com/" target="_blank"><img src="https://github.com/Felipe-ACG/Capydev/blob/main/images/vscodelogo.png", width="40", heigth="40"></a>
+  <img src="https://github.com/Felipe-ACG/Capydev/blob/main/images/jslogo.png", width="40", heigth="40">
+  <img src="https://github.com/Felipe-ACG/Capydev/blob/main/images/csslogo.png", width="40", heigth="40">
+  <img src="https://github.com/Felipe-ACG/Capydev/blob/main/images/htmllogo.png", width="40", heigth="40">
 </div>
