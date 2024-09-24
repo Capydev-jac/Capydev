@@ -11,31 +11,45 @@ O curso sobre Scrum será composto por uma série de módulos, cada um abordando
 
 <h2>Sprints</h2>
 
-| Sprints | Início | Fim | Relatorio |
-| ------- | ------ | --- | --------- |
-| 1ª sprint | 10/09/2024 | 04/10/2024 | Ver |
-| 2ª sprint | 07/10/2024 | 01/11/2024 | Ver |
-| 3ª sprint | 04/11/2024 | 22/11/2024 | Ver |
+| Sprints | Início | Fim |
+| ------- | ------ | --- |
+| 1ª sprint | 10/09/2024 | 04/10/2024 |
+| 2ª sprint | 07/10/2024 | 01/11/2024 |
+| 3ª sprint | 04/11/2024 | 22/11/2024 |
 
 <h2>Product Backlog</h2>
 
-| Prioridade | Função |
-| ---------- | ------ |
-|**Requisitos Funcionais:**|
-| Alta | As páginas devem possuir um mecanismo de navegação comum (menu de navegação) que,ao ser clicado, remete o usuário à seção correspondente; |
-| Alta | O usuário deve ser capaz de se auto cadastrar, informando seu nome completo, e-mail esenha; |
-| Alta  | O usuário deve ser capaz de efetuar autenticação utilizando e-mail do cadastro e senha; |
-| Alta  | O sistema deve manter um cadastro de questões, com alternativas verdadeira ou falsa,referentes aos tópicos apresentados nas páginas do portal; |
-| Alta  | As questões devem ser cadastradas pelo administrador diretamente no SGBD PostgreSQL. |
-| Média | Aos usuários logados, o sistema deve exibir 3 questões para cada tópico. As questões devemcontemplar o tema abordado no tópico; |
-| Média | O usuário não logado pode acessar o conteúdo das páginas (tópicos) do curso, mas nãopode visualizar as questões; |
-| Média | O sistema deve exibir as questões somente nos tópicos que o usuário não tenha sidoaprovado. Para ser considerado aprovado no tópico é necessário acertar pelo menos 2questões; |
-| Média | O sistema deve ser capaz de emitir o certificado de conclusão para os usuários que foramaprovados em todos os tópicos; |
-| Baixa | O usuário pode tentar responder as questões quantas vezes ele quiser até obter êxito; |
-|**Requisitos Não Funcionais:**|
-| Alta | O curso deve cobrir os conhecimentos necessários para o aprendizado do Scrum; |
-| Alta | O visual deve ser responsivo. |
-| Média | Os conteúdos devem ser distribuídos em páginas atendendo aos princípios de arquiteturade informação; |
-| Média | As páginas devem ser organizadas em uma sequência lógica para o aprendizado do Scrumcom um mecanismo para o usuário navegar para a próxima página e página anterior; |
-| Média | O curso deve seguir uma sequência lógica necessária para o aprendizado do Scrum; |
-| Média | As questões devem ser compatíveis com o conteúdo apresentado no tópico; |
+|**Requisitos Funcionais**|
+| ----------------------- |
+RF.01 - As páginas devem possuir um mecanismo de navegação comum (menu de navegação) que,ao ser clicado, remete o usuário à seção correspondente; 
+RF.02 - O usuário deve ser capaz de se auto cadastrar, informando seu nome completo, e-mail esenha; 
+RF.03 - O usuário deve ser capaz de efetuar autenticação utilizando e-mail do cadastro e senha; 
+RF.04 - O sistema deve manter um cadastro de questões, com alternativas verdadeira ou falsa,referentes aos tópicos apresentados nas páginas do portal;
+RF.05 - Aos usuários logados, o sistema deve exibir 3 questões para cada tópico. As questões devemcontemplar o tema abordado no tópico;
+RF.06 - O usuário não logado pode acessar o conteúdo das páginas (tópicos) do curso, mas nãopode visualizar as questões;
+RF.07 - O usuário pode tentar responder as questões quantas vezes ele quiser até obter êxito;
+RF.08 - O sistema deve exibir as questões somente nos tópicos que o usuário não tenha sidoaprovado. Para ser considerado aprovado no tópico é necessário acertar pelo menos 2questões; 
+RF.09 - O sistema deve ser capaz de emitir o certificado de conclusão para os usuários que foramaprovados em todos os tópicos;  
+RF.10 - As questões devem ser cadastradas pelo administrador diretamente no SGBD PostgreSQL.   
+
+|**Rquisitos Não Funcionais**|
+| -------------------------- |
+RNF.01 - Os conteúdos devem ser distribuídos em páginas atendendo aos princípios de arquiteturade informação; 
+RNF.02 - As páginas devem ser organizadas em uma sequência lógica para o aprendizado do Scrumcom um mecanismo para o usuário navegar para a próxima página e página anterior;
+RNF.03 - O curso deve cobrir os conhecimentos necessários para o aprendizado do Scrum;  
+RNF.04 - O curso deve seguir uma sequência lógica necessária para o aprendizado do Scrum; 
+RNF.05 - As questões devem ser compatíveis com o conteúdo apresentado no tópico;
+RNF.06 - O visual deve ser responsivo. 
+
+<h2>Ferramentas Utilizadas</h2>
+<div>
+  <a href="https://github.com/" target="_blank"><img src="https://github.com/Felipe-ACG/Capydev/blob/main/images/githublogo.png", width="40", heigth="40"></a>
+  <a href="https://www.figma.com/" target="_blank"><img src="https://github.com/Felipe-ACG/Capydev/blob/main/images/figmalogo.png", width="40", heigth="40"></a>
+  <a href="https://trello.com/" target="_blank"><img src="https://github.com/Felipe-ACG/Capydev/blob/main/images/trellologo.png", width="40", heigth="40"></a>
+  <a href="https://www.pgadmin.org/" target="_blank"> <img src="https://github.com/Felipe-ACG/Capydev/blob/main/images/pgadminlogo.png", width="40", heigth="40"></a>
+  <a href="https://www.dbdesigner.net/" target="_blank"><img src="https://github.com/Felipe-ACG/Capydev/blob/main/images/dbdesignerlogo.png", width="40", heigth="40"></a>
+  <a href="https://code.visualstudio.com/" target="_blank"><img src="https://github.com/Felipe-ACG/Capydev/blob/main/images/vscodelogo.png", width="40", heigth="40"></a>
+  <img src="https://github.com/Felipe-ACG/Capydev/blob/main/images/jslogo.png", width="40", heigth="40">
+  <img src="https://github.com/Felipe-ACG/Capydev/blob/main/images/csslogo.png", width="40", heigth="40">
+  <img src="https://github.com/Felipe-ACG/Capydev/blob/main/images/htmllogo.png", width="40", heigth="40">
+</div>
