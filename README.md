@@ -53,3 +53,10 @@ RNF.06 - O visual deve ser responsivo.
   <img src="https://github.com/Felipe-ACG/Capydev/blob/main/images/csslogo.png", width="40", heigth="40">
   <img src="https://github.com/Felipe-ACG/Capydev/blob/main/images/htmllogo.png", width="40", heigth="40">
 </div>
+
+<h2>Equipe</h2>
+
+| Nome | Cargo | Midia Social |
+| ---- | ----- | ------------ |
+| João Victor | Scrum Master | <a href="https://github.com/joaoestreano"><img src=""></a> |
+
