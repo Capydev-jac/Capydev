@@ -58,5 +58,11 @@ RNF.06 - O visual deve ser responsivo.
 
 | Nome | Cargo | Midia Social |
 | ---- | ----- | ------------ |
-| João Victor | Scrum Master | <a href="https://github.com/joaoestreano"><img src=""></a> |
-
+| João Victor | Scrum Master | <a href="https://github.com/joaoestreano"><img src="https://skillicons.dev/icons?i=github"></a> |
+| Felipe Adriano | Product Owner | <a href="https://github.com/Felipe-ACG"><img src="https://skillicons.dev/icons?i=github"></a> |
+| Felipe Ribeiro | Desenvolvedor | <a href="https://github.com/feliperib286"><img src="https://skillicons.dev/icons?i=github"></a> |
+| Pedro Prado | Desenvolvedor | <a href="https://github.com/PradoPedro1917"><img src="https://skillicons.dev/icons?i=github"></a> |
+| Gabriel Frois | Desenvolvedor | <a href="https://github.com/GabrielFrois"><img src="https://skillicons.dev/icons?i=github"></a> |
+| Lucas Soares | Desenvolvedor | <a href="https://github.com/lucasgss0000"><img src="https://skillicons.dev/icons?i=github"></a> |
+| Bruno Prince | Desenvolvedor | <a href="https://github.com/BrunoPrince1"><img src="https://skillicons.dev/icons?i=github"></a> |
+| Gabriel Camargo | Desenvolvedor | <a href="https://github.com/gabecamargo"><img src="https://skillicons.dev/icons?i=github"></a> |
