@@ -21,5 +21,5 @@
 
 <h2 align="center">Burndown</h2>
 
-<h2 align="center">Sprint Review</h2>
+<h2 align="center">Sprint Retrospective</h2>
 
