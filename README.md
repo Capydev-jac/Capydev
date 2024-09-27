@@ -11,9 +11,9 @@ O curso sobre Scrum será composto por uma série de módulos, cada um abordando
 
 <h2>Sprints</h2>
 
-| Sprints | Início | Fim |
-| ------- | ------ | --- |
-| 1ª sprint | 10/09/2024 | 04/10/2024 |
+| Sprints | Início | Fim | Relatório |
+| ------- | ------ | --- | --------- |
+| 1ª sprint | 10/09/2024 | 04/10/2024 | <a href="https://github.com/Capydev/tree/sprint-1">Ver</a>
 | 2ª sprint | 07/10/2024 | 01/11/2024 |
 | 3ª sprint | 04/11/2024 | 22/11/2024 |
 
@@ -39,7 +39,17 @@ RNF.02 - As páginas devem ser organizadas em uma sequência lógica para o apre
 RNF.03 - O curso deve cobrir os conhecimentos necessários para o aprendizado do Scrum;  
 RNF.04 - O curso deve seguir uma sequência lógica necessária para o aprendizado do Scrum; 
 RNF.05 - As questões devem ser compatíveis com o conteúdo apresentado no tópico;
-RNF.06 - O visual deve ser responsivo. 
+RNF.06 - O visual deve ser responsivo.
+
+<h2>User Stories</h2>
+
+| Ator | Função |
+| ---- | ------ |
+| Como usuário eu quero: | Um visual responsivo e compreensivo apresentando todos os conteúdos relacionado a Metodologia Scrum e seu aprendizados seguindo de forma organizada |
+| Como usuário eu quero: | Um menu de cadastro e login com apenas: Nome completo, senha e email |
+| Como usuário eu quero: | Questões relacionadas a cada tópico. 3 questões sendo apenas de Verdadeira ou Falsa |
+| Como usuário eu quero: | Ser avaliado com 80% de acerto nas questões para adquirir o certificado de conclusão do curso, se for abaixo de 80% poder realizar novamente |
+| Como usuário eu quero: | Botões de "Proxima Pagina" e "Pagina Anterior" para poder voltar e nevegar de forma mais suave e compreensiva |
 
 <h2>Ferramentas Utilizadas</h2>
 <div>
