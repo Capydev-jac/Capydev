@@ -45,11 +45,15 @@ RNF.06 - O visual deve ser responsivo.
 
 | Ator | Função |
 | ---- | ------ |
+| Como usuário eu quero: | Um menu de navegação entre os módulos do curso para se situar melhor nos módulos e selecionar o que deseja aprender |
 | Como usuário eu quero: | Um visual responsivo e compreensivo apresentando todos os conteúdos relacionado a Metodologia Scrum e seu aprendizados seguindo de forma organizada |
 | Como usuário eu quero: | Um menu de cadastro e login com apenas: Nome completo, senha e email |
 | Como usuário eu quero: | Questões relacionadas a cada tópico. 3 questões sendo apenas de Verdadeira ou Falsa |
 | Como usuário eu quero: | Ser avaliado com 80% de acerto nas questões para adquirir o certificado de conclusão do curso, se for abaixo de 80% poder realizar novamente |
 | Como usuário eu quero: | Botões de "Proxima Pagina" e "Pagina Anterior" para poder voltar e nevegar de forma mais suave e compreensiva |
+
+<h2>Prototipo do Site</h2>
+<img src="https://github.com/Felipe-ACG/Capydev/blob/main/images/wireframe.PNG">
 
 <h2>Ferramentas Utilizadas</h2>
 <div>
