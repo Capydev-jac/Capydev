@@ -23,3 +23,12 @@
 
 <h2 align="center">Sprint Retrospective</h2>
 
+<h4 align="center">
+  <div><i>Nessa primeira sprint começamos meio confusos sobre o que fazer exatamente, mas depois de dar uma organizada no Trello e no Burndown pegamos o tranco, utilizamos a cor ciano e fizemos uma interface simples e minimalista no curso que ajuda na clareza visual e na navegação contendo os princípios da Metodologia Scrum.</i></div>
+<br>
+<div><i>Sobre o gráfico burndown ele se manteve estável na grande parte do projeto, apenas no primeiros 3 dias ele esta meio incorreto, pois, estavamos corrigindo os pontos e configurando a pagina ainda, mas isso é algo que não vai acontecer na segunda sprint pois, ja sabemos utilizar agora, ele se manteve a grande parte na faixa ideal levemente para cima e levemente para baixo, significando que fizemos um trabalho consistente e isso é um grande ponto positivo.</i></div>
+<br>
+<div><i>Em relação a equipe tivemos dificuldade de gerenciar tarefas para 8 pessoas, na maioria das vezes possuía 4/5 pessoas trabalhando e o resto não estava produzindo, mesmo que eles ajudassem em ideias e sugestões, pretendemos designar mais claramente as funções e tarefas para que cada um realmente faça sua parte no projeto para o trabalho fluir melhor.</i></div>
+<br>
+<div><i>Conclusão: foi uma boa primeira sprint introdutória, teve seus problemas iniciais e técnicos, mas o resultado foi satisfatório e pretendemos melhorar mais ainda.</i></div>
+</h4>
