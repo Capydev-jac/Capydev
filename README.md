@@ -80,3 +80,5 @@ RNF.06 - O visual deve ser responsivo.
 | Lucas Soares | Desenvolvedor | <a href="https://github.com/lucasgss0000"><img src="https://skillicons.dev/icons?i=github"></a> |
 | Bruno Prince | Desenvolvedor | <a href="https://github.com/BrunoPrince1"><img src="https://skillicons.dev/icons?i=github"></a> |
 | Gabriel Camargo | Desenvolvedor | <a href="https://github.com/gabecamargo"><img src="https://skillicons.dev/icons?i=github"></a> |
+
+https://www.youtube.com/watch?v=1-HOXAm9ydA
