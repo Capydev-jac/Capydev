@@ -60,15 +60,15 @@ RNF.06 - O visual deve ser responsivo.
 
 <h2>Ferramentas Utilizadas</h2>
 <div>
-  <a href="https://github.com/" target="_blank"><img src="https://github.com/Felipe-ACG/Capydev/blob/main/images/githublogo.png", width="40", heigth="40"></a>
-  <a href="https://www.figma.com/" target="_blank"><img src="https://github.com/Felipe-ACG/Capydev/blob/main/images/figmalogo.png", width="40", heigth="40"></a>
-  <a href="https://trello.com/" target="_blank"><img src="https://github.com/Felipe-ACG/Capydev/blob/main/images/trellologo.png", width="40", heigth="40"></a>
-  <a href="https://www.pgadmin.org/" target="_blank"> <img src="https://github.com/Felipe-ACG/Capydev/blob/main/images/pgadminlogo.png", width="40", heigth="40"></a>
-  <a href="https://www.dbdesigner.net/" target="_blank"><img src="https://github.com/Felipe-ACG/Capydev/blob/main/images/dbdesignerlogo.png", width="40", heigth="40"></a>
-  <a href="https://code.visualstudio.com/" target="_blank"><img src="https://github.com/Felipe-ACG/Capydev/blob/main/images/vscodelogo.png", width="40", heigth="40"></a>
-  <img src="https://github.com/Felipe-ACG/Capydev/blob/main/images/jslogo.png", width="40", heigth="40">
-  <img src="https://github.com/Felipe-ACG/Capydev/blob/main/images/csslogo.png", width="40", heigth="40">
-  <img src="https://github.com/Felipe-ACG/Capydev/blob/main/images/htmllogo.png", width="40", heigth="40">
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original-wordmark.svg", width="40", heigth="40"/>
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/figma/figma-original.svg", width="40", heigth="40"/>
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/trello/trello-plain.svg", width="40", heigth="40"/>
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vscode/vscode-original.svg", width="40", heigth="40"/>
+  <img src="https://github.com/Felipe-ACG/Capydev/blob/main/images/dbdesignerlogo.png", width="40", heigth="40">
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-plain-wordmark.svg", width="40", heigth="40"/>
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-plain-wordmark.svg", width="40", heigth="40"/>
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg", width="40", heigth="40"/>
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-plain-wordmark.svg", width="40", heigth="40"/>
 </div>
 
 <h2>Equipe</h2>
