@@ -21,6 +21,10 @@
 
 <h2 align="center">Burndown</h2>
 
+<div align="center">
+  <img src="https://github.com/Capydev-jac/Capydev/blob/main/images/grafico_burndown_1.PNG">
+</div>
+
 <h2 align="center">Sprint Retrospective</h2>
 
 <h4 align="center">
