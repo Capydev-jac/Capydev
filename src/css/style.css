@@ -49,3 +49,26 @@ body {
 ol{
     margin: 10ox;
 }
+.retangulo {
+            width: 50px; /* Largura do retângulo */
+            height: 350px; /* Altura do retângulo */
+            background-color: #4f4a41; /* Cor de fundo */
+            border-top-left-radius: 0; /* Bordas arredondadas no canto superior esquerdo */
+            border-top-right-radius: 20px; /* Bordas arredondadas no canto superior direito */
+            border-bottom-left-radius: 0; /* Sem arredondamento na parte inferior esquerda */
+            border-bottom-right-radius: 20px; /* Sem arredondamento na parte inferior direita */
+            position: fixed;
+            left: 0%;
+            margin-top: 30px;
+            display: grid;
+            place-items: center;
+        }
+        .circulo{
+        width:20px;
+        height:20px;
+        background-color:#d9d9d9;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+    }
