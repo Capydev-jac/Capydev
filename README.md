@@ -1,7 +1,11 @@
 <h2 align="center">1ª sprint Backlog</h2>
 
 <h4 align="center">
-  <a href="https://trello.com/invite/b/66dcd34ca6e1c4be664d1e7e/ATTI3f800ed02d2735d70ee21ecbb9d7ff9eC088E58D/capydev" target="_blank">Link para o Trello da Sprint</a>
+  <a href="https://www.youtube.com/watch?v=jmAlIHnKUYY">Link da Sprint Review</a>
+</h4>
+
+<h4 align="center">
+  <a href="https://trello.com/b/GLV4kZW1/capydev" target="_blank">Link para o Trello da Sprint</a>
 </h4>
 
 | Prioridade | Função |
