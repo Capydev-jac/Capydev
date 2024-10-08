@@ -22,36 +22,30 @@ O curso sobre Scrum será composto por uma série de módulos, cada um abordando
 
 <h2>Product Backlog</h2>
 
-|**Requisitos Funcionais**|
-| ----------------------- |
-RF.01 - As páginas devem possuir um mecanismo de navegação comum (menu de navegação) que,ao ser clicado, remete o usuário à seção correspondente; 
-RF.02 - O usuário deve ser capaz de se auto cadastrar, informando seu nome completo, e-mail esenha; 
-RF.03 - O usuário deve ser capaz de efetuar autenticação utilizando e-mail do cadastro e senha; 
-RF.04 - O sistema deve manter um cadastro de questões, com alternativas verdadeira ou falsa,referentes aos tópicos apresentados nas páginas do portal;
-RF.05 - Aos usuários logados, o sistema deve exibir 3 questões para cada tópico. As questões devemcontemplar o tema abordado no tópico;
-RF.06 - O usuário não logado pode acessar o conteúdo das páginas (tópicos) do curso, mas nãopode visualizar as questões;
-RF.07 - O usuário pode tentar responder as questões quantas vezes ele quiser até obter êxito;
-RF.08 - O sistema deve exibir as questões somente nos tópicos que o usuário não tenha sidoaprovado. Para ser considerado aprovado no tópico é necessário acertar pelo menos 2questões; 
-RF.09 - O sistema deve ser capaz de emitir o certificado de conclusão para os usuários que foramaprovados em todos os tópicos;  
-RF.10 - As questões devem ser cadastradas pelo administrador diretamente no SGBD PostgreSQL.   
-
-|**Rquisitos Não Funcionais**|
-| -------------------------- |
-RNF.01 - Os conteúdos devem ser distribuídos em páginas atendendo aos princípios de arquiteturade informação; 
-RNF.02 - As páginas devem ser organizadas em uma sequência lógica para o aprendizado do Scrumcom um mecanismo para o usuário navegar para a próxima página e página anterior;
-RNF.03 - O curso deve cobrir os conhecimentos necessários para o aprendizado do Scrum;  
-RNF.04 - O curso deve seguir uma sequência lógica necessária para o aprendizado do Scrum; 
-RNF.05 - As questões devem ser compatíveis com o conteúdo apresentado no tópico;
-RNF.06 - O visual deve ser responsivo.
+| ID | Requisito | User Stories | Definition of Done |
+| -- | --------- | ------------ | ------------------ |
+| RF.01 | As páginas devem possuir um mecanismo de navegação comum (menu de navegação) que, ao ser clicado, remete o usuário à seção correspondente; | Como usuário eu quero um menu de navegação entre os módulos do curso para se situar melhor nos módulos e selecionar o que deseja aprender | Criar botões para navegação entre paginas de forma facil |
+| RF.02 | O usuário deve ser capaz de se auto cadastrar, informando seu nome completo, e-mail e senha; | Como usuário eu quero um menu de cadastro e login com apenas: Nome completo, senha e email |
+| RF.03 | O usuário deve ser capaz de efetuar autenticação utilizando e-mail do cadastro e senha; | Como usuário eu quero um menu de cadastro e login com apenas: Nome completo, senha e email |
+| RF.04 | O sistema deve manter um cadastro de questões, com alternativas verdadeira ou falsa,referentes aos tópicos apresentados nas páginas do portal; |
+| RF.05 | Aos usuários logados, o sistema deve exibir 3 questões para cada tópico. As questões devemcontemplar o tema abordado no tópico; | Como usuário eu quero questões relacionadas a cada tópico. 3 questões sendo apenas de Verdadeira ou Falsa |
+| RF.06 | O usuário não logado pode acessar o conteúdo das páginas (tópicos) do curso, mas nãopode visualizar as questões; |
+| RF.07 | O usuário pode tentar responder as questões quantas vezes ele quiser até obter êxito; |
+| RF.08 | O sistema deve exibir as questões somente nos tópicos que o usuário não tenha sidoaprovado. Para ser considerado aprovado no tópico é necessário acertar pelo menos 2questões; |
+| RF.09 | O sistema deve ser capaz de emitir o certificado de conclusão para os usuários que foramaprovados em todos os tópicos; |
+| RF.10 | As questões devem ser cadastradas pelo administrador diretamente no SGBD PostgreSQL. |   
+| RNF.01 | Os conteúdos devem ser distribuídos em páginas atendendo aos princípios de arquiteturade informação; |
+| RNF.02 | As páginas devem ser organizadas em uma sequência lógica para o aprendizado do Scrumcom um mecanismo para o usuário navegar para a próxima página e página anterior; |
+| RNF.03 | O curso deve cobrir os conhecimentos necessários para o aprendizado do Scrum; |
+| RNF.04 | O curso deve seguir uma sequência lógica necessária para o aprendizado do Scrum; |
+| RNF.05 | As questões devem ser compatíveis com o conteúdo apresentado no tópico; |
+| RNF.06 | O visual deve ser responsivo. |  Como usuário eu quero um visual responsivo e compreensivo apresentando todos os conteúdos relacionado a Metodologia Scrum e seu aprendizados seguindo de forma organizada |
 
 <h2>User Stories</h2>
 
 | Ator | Função |
 | ---- | ------ |
-| Como usuário eu quero: | Um menu de navegação entre os módulos do curso para se situar melhor nos módulos e selecionar o que deseja aprender |
-| Como usuário eu quero: | Um visual responsivo e compreensivo apresentando todos os conteúdos relacionado a Metodologia Scrum e seu aprendizados seguindo de forma organizada |
-| Como usuário eu quero: | Um menu de cadastro e login com apenas: Nome completo, senha e email |
-| Como usuário eu quero: | Questões relacionadas a cada tópico. 3 questões sendo apenas de Verdadeira ou Falsa |
+
 | Como usuário eu quero: | Ser avaliado com 80% de acerto nas questões para adquirir o certificado de conclusão do curso, se for abaixo de 80% poder realizar novamente |
 | Como usuário eu quero: | Botões de "Proxima Pagina" e "Pagina Anterior" para poder voltar e nevegar de forma mais suave e compreensiva |
 
