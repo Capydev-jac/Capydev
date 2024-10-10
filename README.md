@@ -1,11 +1,11 @@
 <h2 align="center">1ª sprint Backlog</h2>
 
 <h4 align="center">
-  <a href="https://www.youtube.com/watch?v=jmAlIHnKUYY">Link da Sprint Review</a>
+  <a href="">Link da Sprint Review</a>
 </h4>
 
 <h4 align="center">
-  <a href="https://trello.com/b/GLV4kZW1/capydev" target="_blank">Link para o Trello da Sprint</a>
+  <a href="https://trello.com/b/0TqFzLcN/sprint-2" target="_blank">Link para o Trello da Sprint</a>
 </h4>
 
 | Prioridade | Função |
@@ -25,18 +25,5 @@
 
 <h2 align="center">Burndown</h2>
 
-<div align="center">
-  <img src="https://github.com/Capydev-jac/Capydev/blob/main/images/grafico_burndown_1.PNG">
-</div>
-
 <h2 align="center">Sprint Retrospective</h2>
 
-<h4 align="center">
-  <div><i>Nessa primeira Sprint começamos meio confusos sobre o que fazer exatamente, porém, depois de nos organizarmos em relação ao Trello e no Burndown seguimos com maior fluidez, optamos pela cor ciano e fizemos uma interface simples e minimalista no curso, a fim de obter uma maior clareza visual e na navegação contendo os princípios da Metodologia Scrum.</i></div>
-<br>
-<div><i>Sobre o gráfico Burndown, ele se manteve estável na grande parte do projeto. Como podemos observar, nos primeiros 3 dias apresentou certa inconsistência, pois estávamos atribuindo os pontos das atividades e configurando-as no Burndown e no Trello, mas isso é algo que pretendemos não se repetir para as próximas Sprints, devido ao conhecimento acumulado até então. O gráfico foi construído baseado na 1 Sprint com foco no Figma, a partir do dia 10 de setembro até o dia 04 de outubro e nos pontos atribuídos das atividades que foram “queimados” na medida que eram realizadas as “dailys” e as atividades propostas. Seguimos o padrão de trabalho com 3 dias semanais, resultando em platôs nos dias em que não haviam reuniões ou atividades em sala, inclusive os finais de semana. Durante os dias de trabalho, atingimos o objetivo da linha ideal do gráfico, uma marca positiva no olhar do time.</i></div>
-<br>
-<div><i>Em relação a equipe, o grupo foi muito coeso no planejamento e realizações das atividades, por uma questão material, nem sempre tínhamos disponíveis 8 computadores para o desenvolvimento dessa etapa no Figma ao mesmo tempo. Entretanto, os desenvolvedores ajudaram de maneiras variadas, seja apontando melhorias na parte estética, ou na pesquisa sobre a facilidade de transformar o nosso protótipo em código, manutenção do Trello e Github entre outras. Para as próximas Sprints, iremos designar as atividades e funções baseado nas competências e habilidades individuais. </i></div>
-<br>
-<div><i>De uma maneira geral, tivemos muitos aspectos positivos durante essa Sprint, foi um momento de aprendizagem e buscar alternativas de maneira coletiva sobre os nossos erros e corrigindo-os. Estamos animados para continuar e melhorar o nosso projeto.</i></div>
-</h4>
