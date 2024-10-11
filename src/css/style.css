@@ -34,7 +34,7 @@ ul, ol {
 }
 body {
     min-height: 100svh;
-    background: linear-gradient(to bottom, #88BDBC, #DDDDDD 100%);
+    background: linear-gradient(to bottom, #88BDBC, #3e5756 100%);
 }
 .quadrado {
     background-color: rgba(255, 255, 255, 0.5); /* Cor de fundo */
@@ -97,11 +97,41 @@ h1 {
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
 }
+.botaoA {
+    width: 150px;;
+    height: 40px;;
+    background-color:#383838;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position:relative;
+   
+}
+.textodobotao {
+    color: #ffff;
+    font-family: "Inter", sans-serif;
+}
+.botaoP {
+    width: 200px;;
+    height: 40px;;
+    background-color:#383838;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    left: 100% ;
+}
+
 
 .bloco-conteudo {
     margin-bottom: 20px;
 }
-
+.botao{
+    align-items: center;
+    width: 90%;
+}
 @media only screen and (max-width: 600px) {
     .retangulo {
         display: none;
