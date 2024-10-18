@@ -13,7 +13,7 @@ O curso sobre Scrum será composto por uma série de módulos, cada um abordando
 | Sprints | Início | Fim | Relatório |
 | ------- | ------ | --- | --------- |
 | 1ª sprint | 10/09/2024 | 04/10/2024 | <a href="https://github.com/Capydev-jac/Capydev/tree/sprint-1">Ver</a>
-| 2ª sprint | 07/10/2024 | 01/11/2024 |
+| 2ª sprint | 07/10/2024 | 01/11/2024 | <a href="https://github.com/Capydev-jac/Capydev/tree/sprint-2">Ver</a>
 | 3ª sprint | 04/11/2024 | 22/11/2024 |
 
 <h2>Product Backlog</h2>
