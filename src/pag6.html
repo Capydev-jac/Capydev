@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+        <style>
+            /* Esconde a área de questões inicialmente */
+            /*#questao-container {
+                display: none;
+            }*/
+            /* Classe para aplicar o efeito de blur */
+        .blur {
+            filter: blur(5px);
+            pointer-events: none;
+        }
+
+        #resultado {
+            margin-top: 20px;
+        }
+        </style>    
+    <title>Eventos do Scrum</title>
+  
+ 
+</head>
+
+<body>
+    <header class="cabecalho">
+        <a href="login.html" class="home"><img src="./imagem/logo.png" alt="logo" width="50" class="logo"></a>
+    </header>
+    <div class="retangulo">
+        <a href="pag1.html" class="circulo" title="Introdução ao Curso Scrum"></a> <!--Incerir link-->
+        <a href="pag2.html" class="circulo" title="O que é Scrum"></a> <!--Incerir link-->
+        <a href="pag3.html" class=" circulo" title="Pilares do Scrum"></a> <!--Incerir link-->
+        <a href="pag4.html" class=" circulo" title="Papeis do Scrum"></a> <!--Incerir link-->
+        <a href="pag5.html" class="circulo" title="Artefatos do Scrum"></a> <!--Incerir link-->
+        <a href="pag6.html" class="circuloselect circulo" title="Eventos do Scrum"></a> <!--Incerir link-->
+        <a href="pag7.html" class="circulo" title="Definição de Pronto"></a> <!--Incerir link-->
+        <a href="pag8.html" class="circulo" title=" Vantagens do Scrum"></a> <!--Incerir link-->
+    </div>
+    <div class="quadrado-pag3">
+        <div class="bloco-conteudo">
+            <h1>Eventos do Scrum</h1>
+        </div>
+        <img src="imagem/eventosScrum.png" , width="100%">
+        <div class="bloco-conteudo-pag3">
+            <br>Os cincos eventos do Scrum são as cerimônias formais que ajudam a estruturar o trabalho e a comunicação dentro do time.
+            </br><br>
+
+            <strong>1. Sprint:</strong>
+            <center>
+                <img src="imagem/sprint.png" , width="75%">
+            </center>
+            <li><strong>Descrição</strong></li>
+            A Sprint é o coração do Scrum, um ciclo de trabalho que dura entre 1 a 4 semanas. No início de cada sprint, a equipe define uma meta clara e no final, entrega um incremento potencialmente utilizável
+            <br>
+            <li><strong>Exemplo:</li></strong>
+            <p> Uma sprint de 2 semanas pode ter a meta de "Implementar a funcionalidade de carrinho de compras"
+                
+                <br><br>
+                <strong> 2. Planejamento da Sprint:</strong>
+                <center>
+                    <img src="imagem/planejamento.png" , width="75%">
+                </center>
+                <li><strong>Descrição:
+                </strong></li>
+                No início de cada sprint, a equipe e o Product Owner se reúnem para selecionar os itens mais prioritários do backlog que serão trabalhados durante a sprint. O Time de Desenvolvimento também define como realizará o trabalho
+                <li><strong>Exemplo:
+                </strong></li>
+                Durante o planejamento, o Product Owner prioriza a funcionalidade de login. O Time de Desenvolvimento avalia e decide que conseguirá implementar e testar essa funcionalidade durante a sprint.
+          
+        </div>
+        <br><br>
+        <strong>3. Daily Scrum (Reunião Diária):</strong>
+        <center>
+            <img src="imagem/daily.png" , width="75%" ,>
+        </center>
+        <p>
+            <li><strong>Descrição:</strong></li>
+        <p> A Daily Scrum é uma reunião diária de 15 minutos, onde o time compartilha o que fez no dia anterior, o que fará no dia seguinte e discute impedimentos.
+            <li><strong>Exemplo:</strong></li.><br>
+                "O que fiz ontem que ajudou o time a atingir a meta da sprint?"<br>
+                "O que farei hoje para ajudar a atingir a meta?"<br>
+                "Há algum impedimento?"<br>
+        <br><br>
+        <strong>4. Revisão da Sprint:</strong>
+        <center>
+            <img src="imagem/reunioes.png" , width="75%">
+                </center>
+            <li><strong>Descrição</strong></li>
+            No final da Sprint, a equipe apresenta o incremento para o Product Owner e os stakeholders. É um evento informal para inspecionar o que foi entregue e ajustar o backlog conforme necessário.
+            <br>
+            <li><strong>Exemplo:</li></strong>
+            <p> Durante a revisão, a equipe demonstra o novo sistema de login. O Product Owner aceita a entrega, mas os stakeholders pedem pequenos ajustes que serão incluídos no backlog.
+            <br><br>
+        <strong> 5. Retrospectiva da Sprint:</strong>
+        <center>
+        <img src="imagem/Sprint-Retrospective.png" , width="75%">
+        </center>
+            <li><strong>Descrição:
+            </strong></li>
+            O último evento da Sprint, a retrospectiva, é uma oportunidade para o time refletir sobre o processo, identificar melhorias e planejar mudanças para a próxima Sprint.
+            <li><strong>Exemplo:
+            </strong></li>
+            Após uma Sprint, a equipe percebe que as revisões de código estavam demorando demais. Eles decidem melhorar essa área na próxima Sprint, criando um processo mais ágil de revisão.
+            </div>
+
+           
+        </ol>
+    </div>
+  <!-- Formulário de login -->
+    <div id="login-form" class="quadrado-pag3">
+     <center>
+     <h2>Login para Acessar as Questões</h2>
+        <form id="form-login">
+        <label for="username">Usuário:</label>
+        <input type="text" id="username" name="username" required><br>
+        <label for="password">Senha:</label>
+        <input type="password" id="password" name="password" required><br><br>
+        <button type="submit">Entrar</button>
+        </form>
+        <p id="login-message"></p>
+        </center>
+    </div>
+
+<!-- Container das questões que inicialmente será escondido -->
+<div id="questao-container" class="blur">
+    <div class="quadrado-questao">
+        <div class="bloco-conteudo">
+            <h2>Avaliação: Papeis do SCRUM</h2>
+            <h3>É necessário obter 80% de acerto para conseguir o certificado ao final do curso</h3>
+            <form id="questao-form">
+                <ol type="1">
+                    <li type="1">O Scrum define três papéis principais que são cargos hierárquicos dentro do framework.</li>
+                    <input type="radio" name="questao1" id="questao1" value="verdadeiro">
+                    <label for="questao1">a) Verdadeiro</label><br>
+                    <input type="radio" name="questao1" id="questao2" value="falso">
+                    <label for="questao2">b) Falso</label>
+               
+                    <br>
+                    <li type="1"> O Product Owner é responsável por gerenciar o Product Backlog, garantindo que esteja
+                    claro e priorizado.<br>
+                    <input type="radio" name="questao2" id="questao3" value="verdadeiro">
+                    <label for="questao3">a) Verdadeiro</label><br>
+                    <input type="radio" name="questao2" id="questao4" value="falso">
+                    <label for="questao4">b) Falso</label>
+                    <br>
+                 </li><br>
+                 <li type="1"> Os membros do time de desenvolvimento são responsáveis apenas por suas próprias
+                    tarefas e não colaboram entre si.<br>
+                    <input type="radio" name="questao3" id="questao5" value="verdadeiro">
+                    <label for="questao5">a) Verdadeiro</label><br>
+                  <input type="radio" name="questao3" id="questao6" value="falso">
+                 <label for="questao6">b) Falso</label>
+                 </li>             
+                
+                 </ol>
+                </li> <br>
+            <div class="botao">
+            <button  type="submit" id="submit-questao">Enviar Respostas</button>
+            </div>
+            </form>
+            <div id="resultado"></div>
+            </div>
+        </div>    
+        </div>
+               <div class="botao">
+             <div class="botaoA">
+                <a href="pag5.html" class="textodobotao">Anterior</a>
+            </div>
+            <div class="botaoP">
+                <a href="pag7.html" class="textodobotao">Próximo</a>
+            </div>
+        </div>
+    </div>         
+<script src="js/script06.js" > </script><!-- criar o java de cada pagina e editar o arquivo -->
+
+      
+</body>
+
+
+</html>
