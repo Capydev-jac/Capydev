@@ -28,13 +28,33 @@ const DOM_headerPictureContainer = document.querySelector(".nav__login > div");
 const DOM_headerPicture = document.querySelector(".nav__login > div > img");
 const DOM_profileName = document.querySelector(".profile__name");
 
+/* limpa as mensagens de erro e afins */
+function clearLoginErrorMessages() {
+  const errorFields = Array.from(document.querySelectorAll(".input-error"));
+  if (errorFields.length > 0) errorFields.forEach((input) => input.classList.remove("input-error")); /* remove estilo de erro dos input fields */
+
+  const errorMsgs = Array.from(document.querySelectorAll(".input-error-msg"));
+  if (errorMsgs.length > 0) errorMsgs.forEach((msg) => msg.remove()); /* remove error msgs */
+}
 
 /* loga o usuário após submissão de user e password na modal de login */
 /* só é executada quando o loginButton é clicado */
 function login() {
+  clearLoginErrorMessages();
+
   const userObj = accounts.find((obj) => DOM_loginEmailField.value === obj.email);
-  if (!userObj) return;
-  if (userObj.password !== DOM_loginPasswordField.value) return;
+  if (!userObj) {
+    DOM_loginEmailField.classList.add("input-error");
+    DOM_loginPasswordField.value = '';
+    DOM_loginEmailField.insertAdjacentHTML('afterend', `<div class="input-error-msg">O e-mail fornecido não foi registrado.</div>`)
+    return;
+  }
+  if (userObj.password !== DOM_loginPasswordField.value) {
+    DOM_loginPasswordField.classList.add("input-error");
+    DOM_loginPasswordField.value = '';
+    DOM_loginPasswordField.insertAdjacentHTML('afterend', `<div class="input-error-msg">Senha incorreta.</div>`)
+    return;
+  };
   localStorage.clear();
   localStorage.setItem("currentUser", JSON.stringify(userObj)); // adiciona o user logado no cachê do browser
   location.reload(); // recarrega a página
@@ -102,6 +122,7 @@ Array.from(DOM_closeButtons).forEach((button) => {
     DOM_loginModal.classList.add("hidden");
     DOM_signupModal.classList.add("hidden");
     DOM_profileModal.classList.add("hidden");
+    clearLoginErrorMessages();
   });
 });
 
@@ -115,6 +136,7 @@ DOM_registerRedirectButton.addEventListener("click", (e) => {
 DOM_loginRedirectButton.addEventListener("click", (e) => {
   DOM_signupModal.classList.add("hidden");
   DOM_loginModal.classList.remove("hidden");
+  clearLoginErrorMessages();
 });
 
 /* loga + faz com que o botão não submeta o formulário */

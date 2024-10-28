@@ -73,12 +73,31 @@
   padding-inline: 10px;
   padding-block: 4px;
   font-size: 17px;
+  margin-block-end: 5px;
 }
 
 .login-component input:focus, .signup-component input:focus {
   border: none;
   outline: 2px solid var(--verde-cor);
 }
+
+/* estilo para erros, lógica de aplicação em login-signup.js */
+input.input-error { /* input no inicio para aumentar a especificidade do seletor */  
+  border: none;
+  outline: 2px solid red;
+  color: red;
+}
+
+input.input-error:focus {
+  outline: 2px solid red; /* pra não ficar verde no foco */
+}
+
+.input-error-msg {
+  color: red;
+  font-weight: 400;
+  font-size: 15px;
+}
+/* ------ */
 
 .login-component button, .signup-component button {
   display: block;
