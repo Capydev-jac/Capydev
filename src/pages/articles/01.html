@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width initial-scale=1.0">
+    <title>Introdução ao Scrum</title>
+    <link rel="stylesheet" href="../../styles/base.css">
+    <link rel="stylesheet" href="../../styles/header.css">
+    <link rel="stylesheet" href="../../styles/login-signup.css">
+    <link rel="stylesheet" href="../../styles/profile.css">
+    <link rel="stylesheet" href="../../styles/footer.css">
+    <link rel="stylesheet" href="../../styles/articles.css">
+    <link rel="stylesheet" href="../../styles/quiz.css">
+    <script defer src="../../scripts/login-signup.js"></script>
+</head>
+<body>
+    <!-- overlay -->
+    <div class="overlay hidden"></div>
+    
+
+    <!-- modal de login -->
+    <div class="login-component hidden">
+      <div class="close-button">×</div>
+      <form action="POST">
+        <h2>Login</h2>
+        <div class="login__email-field input-field">
+          <label for="login__email">Email</label>
+          <input id="login__email" type="email" name="email" placeholder="Insira seu email"/>
+        </div>
+        <div class="login__password-field input-field">
+          <label for="login__password">Senha</label>
+          <input id="login__password" type="password" name="password" placeholder="Insira sua senha"/>
+        </div>
+        <button>Entrar</button>
+      </form>
+      <div class="register-redirect">Ainda não tem uma conta? <span class="register-redirect__button">Cadastre-se</span> agora!</div>
+    </div>
+    
+
+    <!-- modal de cadastro -->
+    <div class="signup-component hidden">
+      <div class="close-button">×</div>
+      <form action="POST">
+        <h2>Cadastro</h2>
+        <div class="signup__name-field input-field">
+          <label for="signup__firstname">Nome Completo</label>
+          <div class="signup__name-field__inputs">
+            <input id="signup__firstname" type="text" name="first-name" placeholder="Nome" />
+            <input id="signup__lastname" type="text" name="surname" placeholder="Sobrenome">
+          </div>
+        </div>
+        <div class="signup__email-field input-field">
+          <label for="signup__email">Email</label>
+          <input id="signup__email" type="email" name="email" placeholder="Insira seu email"/>
+        </div>
+        <div class="signup__password-field input-field">
+          <label for="signup__password">Senha</label>
+          <input id="signup__password" type="password" name="password" placeholder="Insira sua senha"/>
+          <input id="signup__password-confirm" type="password" placeholder="Confirme sua senha"/>
+          <!-- sem o atributo "name" pq o campo de confirmação não tem valor pro formulário em si -->
+        </div>
+        <button>Cadastrar-se</button>
+      </form>
+      <div class="login-redirect">Já possui registro? <span class="login-redirect__button">Entre</span> com a sua conta!</div>
+    </div>
+
+    
+    <!-- modal de perfil (só aparece caso o user esteja logado) --> 
+    <div class="profile-component hidden">
+      <div class="close-button">×</div>
+      <picture>
+        <img src="../../images/capy-pfp.webp" alt="Avatar genérico de capivara." />
+      </picture>
+      <div class="profile__name"></div>
+      <p class="profile__message">Você precisa obter, no mínimo, 80% de acertos em mais <span class="profile__message__number-of-quizzes">X</span> de 7 questinários para emitir o seu certificado!</p>
+      <button class="profile__certificate profile__certificate--disabled">Certificado</button>
+      <div class="profile__account-actions">
+        <button class="profile__logoff">Sair</button>
+        <button class="profile__delete">Deletar Conta</button>
+      </div>
+    </div>
+
+
+    <!-- cabeçalho --> 
+    <header>
+      <nav>
+        <a class="nav__logo" href="../../../index.html">
+          <img src="../../images/logo.png" alt="Logo da equipe CapyDev.">
+        </a>
+        <div class="nav__login">
+          <span>Entrar</span>
+          <div data-context="article"><img src="../../images/login-icon.png" alt="Icone generico de login." /></div>
+        </div>
+      </nav>
+    </header>
+
+
+    <!-- barra de navegação -->
+    <nav class="nav-bar">
+        <a href="./01.html" class="nav-bar__circle nav-bar__circle--selected" title="Introdução ao Curso Scrum"></a>
+        <a href="./02.html" class="nav-bar__circle" title="O que é Scrum"></a>
+        <a href="./03.html" class="nav-bar__circle" title="Pilares do Scrum"></a>
+        <a href="./04.html" class="nav-bar__circle" title="Papeis do Scrum"></a>
+        <a href="./05.html" class="nav-bar__circle" title="Artefatos do Scrum"></a>
+        <a href="./06.html" class="nav-bar__circle" title="Eventos do Scrum"></a>
+        <a href="./07.html" class="nav-bar__circle" title="Definição de Pronto"></a>
+        <a href="./08.html" class="nav-bar__circle" title=" Vantagens do Scrum"></a>
+    </nav>
+
+   
+    <!-- bloco de conteudo -->
+    <!-- o caminho relativo pro folder de imagens é: 
+    "../../images/nome_da_imagem.png" -->
+    <main>
+        <h1>Introdução ao Curso de Scrum</h1>
+        <p>
+            Bem-vindo ao nosso curso sobre o Método Scrum, uma abordagem ágil que tem revolucionado a forma como equipes gerenciam projetos e entregam resultados em um ambiente dinâmico. Aqui, você aprenderá a implementar o Scrum de maneira prática e eficaz, capacitando-se para enfrentar os desafios contemporâneos do mercado.
+        </p>
+        <div class="subtopic-h2">
+            <h2>O que é o Scrum?</h2>
+            <p>
+                Scrum é uma estrutura de gerenciamento de projetos que promove a colaboração em equipe e a entrega incremental de produtos. Originado no desenvolvimento de software, o método rapidamente se espalhou para diversas indústrias devido à sua flexibilidade e adaptabilidade. A metodologia é centrada em Sprints, que são ciclos curtos de trabalho, permitindo que as equipes ajustem suas prioridades e entreguem resultados de forma contínua.
+            </p>
+        </div>
+        <div class="subtopic-h2">
+            <h2>Por que aprender Scrum?</h2>
+            <p>  
+              No atual cenário, onde mudanças rápidas são a norma, organizações precisam de metodologias que permitam adaptações ágeis. O Scrum não apenas melhora a eficiência, mas também fomenta uma cultura de colaboração, inovação e transparência. Aprender Scrum capacita profissionais a gerenciar projetos de maneira mais eficiente, independentemente do setor, desde tecnologia até marketing e educação.
+            <p>
+            <div class="subtopic-h3">
+              <h3>Benefícios do Método Scrum</h3>
+              <ul>
+                <li><b>Transparência:</b> A comunicação aberta é um pilar do Scrum, garantindo que todos os membros da equipe estejam alinhados sobre o progresso e os desafios.</li>
+                <li><b>Adaptação Rápida:</b> Reuniões diárias e revisões de Sprint permitem que as equipes se ajustem a novas informações e mudanças no escopo rapidamente.</li>
+                <li><b>Foco em Resultados:</b> O trabalho é organizado em Sprints curtos, ajudando a manter o foco e a promover entregas regulares de valor.</li>
+                <li><b>Melhoria Contínua:</b> As retrospectivas oferecem um espaço para reflexão e identificação de melhorias, promovendo um ciclo constante de aprendizado.</li>
+              </ul>
+            </div>
+        </div>
+        <div class="subtopic-h2">
+            <h2>O que você aprenderá nesse curso?</h2>
+            <p>
+            Nosso curso é abrangente e prático, abordando:
+            </p>
+            <ul>
+              <li><b>Papéis do Scrum:</b> Conheça as funções do Product Owner, Scrum Master e da equipe de desenvolvimento.</li>
+              <li><b>Artefatos do Scrum:</b> Aprenda sobre o Product Backlog, Sprint Backlog e o Incremento.</li>
+              <li><b>Cerimônias do Scrum:</b> Entenda a importância da Daily Stand-up, Sprint Review e Sprint Retrospective.</li>
+            </ul>
+            <div class="subtopic-h3">
+              <h3>Metodologia de Ensino</h3>
+              <p>
+                  Adotamos uma metodologia ativa de ensino, que combina teoria, estudos de caso e simulações práticas. Você terá a oportunidade de aplicar os conceitos em situações reais, garantindo que saia do curso não apenas com conhecimento teórico, mas com habilidades práticas prontas para serem implementadas.
+              </p>
+            </div>
+            <div class="subtopic-h3">
+              <h3>Certificação</h3>
+              <p>
+                  Ao final do curso, todos os participantes receberão um certificado de conclusão, reconhecendo suas habilidades e conhecimentos adquiridos sobre o Método Scrum. Essa certificação é um diferencial importante em sua carreira, demonstrando sua capacidade de gerenciar projetos ágeis de maneira eficaz.
+              </p>
+            </div>
+        </div>
+        <div class="subtopic-h2">
+            <h2>Conclusão</h2>
+            <p>
+                Ao finalizar este curso, você estará pronto para implementar o método Scrum em sua equipe ou organização, melhorando a produtividade e a colaboração. Se você está preparado para transformar a forma como trabalha, junte-se a nós e inicie sua jornada no mundo do Scrum. Descubra como essa abordagem ágil pode fazer a diferença em seus projetos e na sua carreira!
+            </p>
+        </div>
+    </main> 
+
+
+    <!-- navegação alternativa -->
+    <nav class="nav-alt">
+      <a href="./02.html" style="margin-inline-start: auto"><button class="nav-alt__next">Próximo</button></a>
+    </nav>
+
+
+    <!-- rodapé -->
+    <footer>
+      <address>
+        <img src="../../images/github-icon.png" alt="Ícone do Github." />
+	<a rel="author" href="https://github.com/Capydev-jac">CapyDev</a>
+      </address>
+    </footer>
+
+</body>
+</html>

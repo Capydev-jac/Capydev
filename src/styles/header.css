@@ -1,0 +1,39 @@
+header > nav {
+  display: flex;
+  justify-content: space-between; /* Coloca o logo na esquerda e o login na direita */
+  align-items: center;
+  height: 65px;
+  padding-inline-start: 10px;
+  padding-inline-end: 15px;
+  background-color: var(--verde-cor);
+}
+
+.nav__logo {
+  height: 50px; 
+  display: block;
+}
+
+.nav__logo > img {
+  height: 100%;
+}
+
+.nav__login {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 1.1rem;
+  color: var(--branco-cor);
+  font-weight: 700;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+.nav__login > div {
+  width: 38px;
+  overflow: hidden;
+}
+
+.nav__login > div > img {
+  display: block;
+  width: 100%;
+}

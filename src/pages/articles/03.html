@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width initial-scale=1.0">
+    <title>Pilares do Scrum</title>
+    <link rel="stylesheet" href="../../styles/base.css">
+    <link rel="stylesheet" href="../../styles/header.css">
+    <link rel="stylesheet" href="../../styles/login-signup.css">
+    <link rel="stylesheet" href="../../styles/profile.css">
+    <link rel="stylesheet" href="../../styles/footer.css">
+    <link rel="stylesheet" href="../../styles/articles.css">
+    <link rel="stylesheet" href="../../styles/quiz.css">
+    <script defer src="../../scripts/login-signup.js"></script>
+</head>
+<body>
+    <!-- overlay -->
+    <div class="overlay hidden"></div>
+    
+
+    <!-- modal de login -->
+    <div class="login-component hidden">
+      <div class="close-button">×</div>
+      <form action="POST">
+        <h2>Login</h2>
+        <div class="login__email-field input-field">
+          <label for="login__email">Email</label>
+          <input id="login__email" type="email" name="email" placeholder="Insira seu email"/>
+        </div>
+        <div class="login__password-field input-field">
+          <label for="login__password">Senha</label>
+          <input id="login__password" type="password" name="password" placeholder="Insira sua senha"/>
+        </div>
+        <button>Entrar</button>
+      </form>
+      <div class="register-redirect">Ainda não tem uma conta? <span class="register-redirect__button">Cadastre-se</span> agora!</div>
+    </div>
+    
+
+    <!-- modal de cadastro -->
+    <div class="signup-component hidden">
+      <div class="close-button">×</div>
+      <form action="POST">
+        <h2>Cadastro</h2>
+        <div class="signup__name-field input-field">
+          <label for="signup__firstname">Nome Completo</label>
+          <div class="signup__name-field__inputs">
+            <input id="signup__firstname" type="text" name="first-name" placeholder="Nome" />
+            <input id="signup__lastname" type="text" name="surname" placeholder="Sobrenome">
+          </div>
+        </div>
+        <div class="signup__email-field input-field">
+          <label for="signup__email">Email</label>
+          <input id="signup__email" type="email" name="email" placeholder="Insira seu email"/>
+        </div>
+        <div class="signup__password-field input-field">
+          <label for="signup__password">Senha</label>
+          <input id="signup__password" type="password" name="password" placeholder="Insira sua senha"/>
+          <input id="signup__password-confirm" type="password" placeholder="Confirme sua senha"/>
+          <!-- sem o atributo "name" pq o campo de confirmação não tem valor pro formulário em si -->
+        </div>
+        <button>Cadastrar-se</button>
+      </form>
+      <div class="login-redirect">Já possui registro? <span class="login-redirect__button">Entre</span> com a sua conta!</div>
+    </div>
+
+    
+    <!-- modal de perfil (só aparece caso o user esteja logado) --> 
+    <div class="profile-component hidden">
+      <div class="close-button">×</div>
+      <picture>
+        <img src="../../images/capy-pfp.webp" alt="Avatar genérico de capivara." />
+      </picture>
+      <div class="profile__name"></div>
+      <p class="profile__message">Você precisa obter, no mínimo, 80% de acertos em mais <span class="profile__message__number-of-quizzes">X</span> de 7 questinários para emitir o seu certificado!</p>
+      <button class="profile__certificate profile__certificate--disabled">Certificado</button>
+      <div class="profile__account-actions">
+        <button class="profile__logoff">Sair</button>
+        <button class="profile__delete">Deletar Conta</button>
+      </div>
+    </div>
+
+
+    <!-- cabeçalho --> 
+    <header>
+      <nav>
+        <a class="nav__logo" href="../../../index.html">
+          <img src="../../images/logo.png" alt="Logo da equipe CapyDev.">
+        </a>
+        <div class="nav__login">
+          <span>Entrar</span>
+          <div data-context="article"><img src="../../images/login-icon.png" alt="Icone generico de login." /></div>
+        </div>
+      </nav>
+    </header>
+
+
+    <!-- barra de navegação -->
+    <nav class="nav-bar">
+        <a href="./01.html" class="nav-bar__circle" title="Introdução ao Curso Scrum"></a>
+        <a href="./02.html" class="nav-bar__circle" title="O que é Scrum"></a>
+        <a href="./03.html" class="nav-bar__circle nav-bar__circle--selected" title="Pilares do Scrum"></a>
+        <a href="./04.html" class="nav-bar__circle" title="Papeis do Scrum"></a>
+        <a href="./05.html" class="nav-bar__circle" title="Artefatos do Scrum"></a>
+        <a href="./06.html" class="nav-bar__circle" title="Eventos do Scrum"></a>
+        <a href="./07.html" class="nav-bar__circle" title="Definição de Pronto"></a>
+        <a href="./08.html" class="nav-bar__circle" title=" Vantagens do Scrum"></a>
+    </nav>
+
+
+    <!-- bloco de conteudo -->
+    <!-- o caminho relativo pro folder de imagens é: 
+    "../../images/nome_da_imagem.png" -->
+    <main>
+        <h1>Pilares do Scrum</h1>
+        <p>
+            Os três pilares do Scrum são princípios fundamentais que sustentam todo o framework e garantem que o processo funcione de maneira eficaz e contínua.
+        </p>
+        <picture>
+          <img src="../../images/pilares-scrum.png" alt="Imagem ilustrativa dos três pilares do Scrum. Mostra uma construção, cuja base é a Confiança, com o telhado sustentado por 3 pilares. Nos pilares está escrito Transparência, Inspeção, Adaptação, além de ícones e um breve detalhamento.">
+        </picture>
+        <div class="subtopic-h2">
+            <h2>Transparência</h2>
+            <p>
+                No Scrum, todos os processos e informações devem ser visíveis e acessíveis para todos os membros do time e stakeholders. Isso ajuda a criar confiança e facilita a tomada de decisões rápidas e informadas.
+            </p>
+            <div class="subtopic-h3">
+              <h3>Exemplo</h3>
+              <p>
+                  O quadro de tarefas (task board) utilizado pelo time deve estar sempre visível, mostrando claramente o que está sendo feito, o que já foi concluído e o que ainda precisa ser realizado.
+              </p>
+              <div class="subtopic-h4">
+                <h4>Ferramentas para garantir a Transparência</h4>
+                <ul>
+                  <li>Quadro Scrum (Kanban boards)</li>
+                  <li>Burn-down charts (gráficos de desempenho)</li>
+                  <li>Backlogs visíveis para todos</li>
+                </ul>
+              </div>
+            </div>
+        </div>
+        <div class="subtopic-h2">
+            <h2>Inspeção</h2>
+            <p>
+                Frequentemente, os artefatos e o progresso são inspecionados para identificar possíveis problemas ou variações em relação ao planejamento. A inspeção é uma oportunidade para ajustar o curso do projeto antes que os problemas cresçam.
+            <p>
+            <div class="subtopic-h3">
+              <h3>Exemplo</h3>
+              <p>
+                  Durante a Daily Scrum (reunião diária), a equipe avalia seu progresso em relação à meta da sprint. Se houver atrasos ou dificuldades, eles são identificados nesse momento.
+              </p>
+            </div>
+        </div>
+        <div class="subtopic-h2">
+            <h2>Adaptação</h2>
+            <p>
+              Se algo for identificado como fora do esperado durante a inspeção, o time precisa se adaptar para corrigir o problema e ajustar o processo.
+            </p>
+            <div class="subtopic-h3">
+              <h3>Exemplo</h3>
+              <p>
+                  Após a Retrospectiva da Sprint, o time pode decidir ajustar sua abordagem para a próxima sprint, implementando novas práticas para evitar os problemas que surgiram na anterior.    
+              </p>
+            </div>
+        </div>
+    </main> 
+
+
+    <!-- quiz -->
+    <section class="quiz">
+      <div class="quiz__overlay">Entre com a sua conta para ter acesso ao questionário!</div>
+      <h2>Avaliação: Pilares do Scrum</h2>
+      <p>Em conformidade com o que foi exposto até aqui, analise a veracidade das seguintes afirmativas:</p>
+      <form>
+
+        <div class="quiz__question">
+          <p><span class="quiz__question__number">1.</span> Os três pilares do Scrum são fundamentais para garantir que o processo funcione de maneira eficaz e contínua.</p>
+          <div class="quiz__question__option">
+            <input type="radio" id="question_1--v" name="question_03.1" value="v">
+            <label for="question_1--v">Verdadeiro</label>
+          </div>
+          <div class="quiz__question__option">
+            <input type="radio" id="question_1--f" name="question_03.1" value="f">
+            <label for="question_1--f">Falso</label>
+          </div>
+        </div>
+
+        <div class="quiz__question">
+          <p><span class="quiz__question__number">2.</span> Durante a Daily Scrum, a equipe avalia seu progresso em relação à meta da sprint.</p>
+          <div class="quiz__question__option">
+            <input type="radio" id="question_1--v" name="question_03.2" value="v">
+            <label for="question_1--v">Verdadeiro</label>
+          </div>
+          <div class="quiz__question__option">
+            <input type="radio" id="question_1--f" name="question_03.2" value="f">
+            <label for="question_1--f">Falso</label>
+          </div>
+        </div>
+
+        <div class="quiz__question">
+          <p><span class="quiz__question__number">3.</span> O uso de ferramentas como quadros Scrum e gráficos de desempenho ajuda a garantir a transparência.</p>
+          <div class="quiz__question__option">
+            <input type="radio" id="question_1--v" name="question_03.3" value="v">
+            <label for="question_1--v">Verdadeiro</label>
+          </div>
+          <div class="quiz__question__option">
+            <input type="radio" id="question_1--f" name="question_03.3" value="f">
+            <label for="question_1--f">Falso</label>
+          </div>
+        </div>
+
+        <button>Submeter</button>
+      </form>
+    </section>
+
+    <!-- home icon
+    <div class="home-icon">
+      <img src="../../images/home-icon.png" alt="Ícone de navegação para a Home Page." />
+    </div>
+    -->
+
+    <!-- navegação alternativa -->
+    <nav class="nav-alt">
+      <a href="./02.html"><button class="nav-alt__previous">Anterior</button></a>
+      <a href="./04.html"><button class="nav-alt__next">Próximo</button></a>
+    </nav>
+
+    <!-- rodapé -->
+    <footer>
+      <address>
+        <img src="../../images/github-icon.png" alt="Ícone do Github." />
+	<a rel="author" href="https://github.com/Capydev-jac">CapyDev</a>
+      </address>
+    </footer>
+
+</body>
+</html>

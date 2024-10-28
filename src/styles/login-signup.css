@@ -1,0 +1,127 @@
+/* overlay style */
+.overlay {
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(10px);
+  background-color: hsl(0deg 0% 0% / 0.5);
+  position: fixed;
+  z-index: 4;
+  top: 0;
+  left: 0;
+}
+
+
+/* login & signup components style */
+.close-button {
+  position: absolute;
+  top: 7px;
+  right: 12px;
+  font-size: 22px;
+  font-weight: 700;
+  transition: all 0.5s ease-in-out;
+}
+
+.close-button:hover {
+  color: var(--verde-cor);
+  transform: rotate(90deg);
+  font-size: 26px;
+  cursor: pointer;
+}
+
+.login-component, .signup-component {
+  position: fixed;
+  z-index: 5;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: clamp(320px, 12.207vw + 274.225px, 450px);
+  background-color: var(--branco-cor);
+  border-radius: 12px;
+  padding-block: 20px;
+  padding-inline: clamp(20px, 1.878vw + 12.958px, 40px);
+}
+
+.input-field {
+  margin-block-end: 15px;
+}
+
+.login-component h2, .signup-component h2 {
+  text-align: center;
+  color: var(--verde-escuro-cor);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 30px;
+  margin-block-end: 26px;
+  font-weight: 700;
+}
+
+.login-component label, .signup-component label {
+  display: block;
+  font-weight: 500;
+  color: var(--verde-escuro-cor);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 17px;
+  margin-block-end: 6px;
+}
+
+.login-component input, .signup-component input {
+  width: 100%;
+  border-radius: 4px;
+  border: 1px solid slategrey;
+  height: 30px;
+  padding-inline: 10px;
+  padding-block: 4px;
+  font-size: 17px;
+}
+
+.login-component input:focus, .signup-component input:focus {
+  border: none;
+  outline: 2px solid var(--verde-cor);
+}
+
+.login-component button, .signup-component button {
+  display: block;
+  margin: 0 auto;
+  margin-block-start: 30px;
+  margin-block-end: 30px;
+  outline: none;
+  border: none;
+  border-radius: 4px;
+  padding-block: 5px;
+  padding-inline: 50px;
+  text-align: center;
+  background-color: var(--verde-cor);
+  color: white;
+  font-size: 17px;
+}
+
+.login-component button:focus, .signup-component button:focus { /* acessiblidade */
+  border: 2px inset slategray;
+}
+
+.register-redirect, .login-redirect {
+  text-align: center;
+  color: #474747;
+}
+
+.register-redirect__button, .login-redirect__button {
+  color: var(--verde-cor);
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+.register-redirect__button:hover, .login-redirect__button:hover {
+  cursor: pointer;
+}
+
+
+/* estilo específico do registro */
+.signup__name-field__inputs {
+  display: flex;
+  gap: 16px;
+}
+
+#signup__password {
+  margin-block-end: 10px;
+}

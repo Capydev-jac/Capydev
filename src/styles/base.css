@@ -1,0 +1,40 @@
+/* estilos de base, estão presentes em TODAS as páginas do site */
+/* resetar estilos originais inconvenientes do browser */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* paleta de cores nas variaveis */
+  --verde-claro-cor: #88BDBC;
+  --verde-cor: #254E58;
+  --verde-escuro-cor: #112D32;
+  --marrom-escuro-cor: #332915;
+  --marrom-cor: #4F4A41;
+  --marrom-claro-cor: #6E6658;
+  --marrom-claro-claro-cor: #d9c9ad;
+  --branco-cor: #ffffff;
+}
+
+@font-face {font-family: "Inter"; src: url("../fonts/inter.ttf");}
+@font-face {font-family: "Inter Italic"; src: url("../fonts/inter-italic.ttf");}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100svh; 
+  max-width: 100svw;
+  font-family: "Inter", "Inter Italic";
+}
+
+.hidden {
+  display: none;
+}
+
+/* cor ao selecionar texto com o cursor */
+::selection {
+  color: var(--branco-cor);
+  background-color: var(--verde-cor);
+}

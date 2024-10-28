@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width initial-scale=1.0">
+    <title>Artefatos do Scrum</title>
+    <link rel="stylesheet" href="../../styles/base.css">
+    <link rel="stylesheet" href="../../styles/header.css">
+    <link rel="stylesheet" href="../../styles/login-signup.css">
+    <link rel="stylesheet" href="../../styles/profile.css">
+    <link rel="stylesheet" href="../../styles/footer.css">
+    <link rel="stylesheet" href="../../styles/articles.css">
+    <link rel="stylesheet" href="../../styles/quiz.css">
+    <script defer src="../../scripts/login-signup.js"></script>
+</head>
+<body>
+    <!-- overlay -->
+    <div class="overlay hidden"></div>
+    
+
+    <!-- modal de login -->
+    <div class="login-component hidden">
+      <div class="close-button">×</div>
+      <form action="POST">
+        <h2>Login</h2>
+        <div class="login__email-field input-field">
+          <label for="login__email">Email</label>
+          <input id="login__email" type="email" name="email" placeholder="Insira seu email"/>
+        </div>
+        <div class="login__password-field input-field">
+          <label for="login__password">Senha</label>
+          <input id="login__password" type="password" name="password" placeholder="Insira sua senha"/>
+        </div>
+        <button>Entrar</button>
+      </form>
+      <div class="register-redirect">Ainda não tem uma conta? <span class="register-redirect__button">Cadastre-se</span> agora!</div>
+    </div>
+    
+
+    <!-- modal de cadastro -->
+    <div class="signup-component hidden">
+      <div class="close-button">×</div>
+      <form action="POST">
+        <h2>Cadastro</h2>
+        <div class="signup__name-field input-field">
+          <label for="signup__firstname">Nome Completo</label>
+          <div class="signup__name-field__inputs">
+            <input id="signup__firstname" type="text" name="first-name" placeholder="Nome" />
+            <input id="signup__lastname" type="text" name="surname" placeholder="Sobrenome">
+          </div>
+        </div>
+        <div class="signup__email-field input-field">
+          <label for="signup__email">Email</label>
+          <input id="signup__email" type="email" name="email" placeholder="Insira seu email"/>
+        </div>
+        <div class="signup__password-field input-field">
+          <label for="signup__password">Senha</label>
+          <input id="signup__password" type="password" name="password" placeholder="Insira sua senha"/>
+          <input id="signup__password-confirm" type="password" placeholder="Confirme sua senha"/>
+          <!-- sem o atributo "name" pq o campo de confirmação não tem valor pro formulário em si -->
+        </div>
+        <button>Cadastrar-se</button>
+      </form>
+      <div class="login-redirect">Já possui registro? <span class="login-redirect__button">Entre</span> com a sua conta!</div>
+    </div>
+
+    
+    <!-- modal de perfil (só aparece caso o user esteja logado) --> 
+    <div class="profile-component hidden">
+      <div class="close-button">×</div>
+      <picture>
+        <img src="../../images/capy-pfp.webp" alt="Avatar genérico de capivara." />
+      </picture>
+      <div class="profile__name"></div>
+      <p class="profile__message">Você precisa obter, no mínimo, 80% de acertos em mais <span class="profile__message__number-of-quizzes">X</span> de 7 questinários para emitir o seu certificado!</p>
+      <button class="profile__certificate profile__certificate--disabled">Certificado</button>
+      <div class="profile__account-actions">
+        <button class="profile__logoff">Sair</button>
+        <button class="profile__delete">Deletar Conta</button>
+      </div>
+    </div>
+
+
+    <!-- cabeçalho --> 
+    <header>
+      <nav>
+        <a class="nav__logo" href="../../../index.html">
+          <img src="../../images/logo.png" alt="Logo da equipe CapyDev.">
+        </a>
+        <div class="nav__login">
+          <span>Entrar</span>
+          <div data-context="article"><img src="../../images/login-icon.png" alt="Icone generico de login." /></div>
+        </div>
+      </nav>
+    </header>
+
+
+    <!-- barra de navegação -->
+    <nav class="nav-bar">
+        <a href="./01.html" class="nav-bar__circle" title="Introdução ao Curso Scrum"></a>
+        <a href="./02.html" class="nav-bar__circle" title="O que é Scrum"></a>
+        <a href="./03.html" class="nav-bar__circle" title="Pilares do Scrum"></a>
+        <a href="./04.html" class="nav-bar__circle" title="Papeis do Scrum"></a>
+        <a href="./05.html" class="nav-bar__circle nav-bar__circle--selected" title="Artefatos do Scrum"></a>
+        <a href="./06.html" class="nav-bar__circle" title="Eventos do Scrum"></a>
+        <a href="./07.html" class="nav-bar__circle" title="Definição de Pronto"></a>
+        <a href="./08.html" class="nav-bar__circle" title=" Vantagens do Scrum"></a>
+    </nav>
+
+
+    <!-- bloco de conteudo -->
+    <!-- o caminho relativo pro folder de imagens é: 
+    "../../images/nome_da_imagem.png" -->
+    <main>
+        <h1>Artefatos do Scrum</h1>
+        <p>
+            Os artefatos no Scrum são as ferramentas e produtos tangíveis criados durante o processo. Eles fornecem informações sobre o progresso do trabalho e ajudam a equipe a manter o foco na entrega de valor.
+        </p>
+        <div class="subtopic-h2">
+          <h2>Product Backlog (Backlog do Produto)</h2>
+          <picture>
+            <img src="../../images/product-backlog.png" alt="Imagem ilustrativa que representa o Product Backlog no Scrum.">
+          </picture>
+          <div class="subtopic-h3">
+            <h3>Descrição</h3>
+            <p>
+                O Product Backlog é uma lista priorizada de tudo o que precisa ser feito para o produto. O Product Owner é responsável por mantê-lo atualizado e priorizado, de acordo com o valor que cada item traz para o negócio.
+            </p>
+            <div class="subtopic-h4">
+              <h4>Exemplo</h4>
+              <p>
+                  Funcionalidades principais, melhorias, correções de bugs, requisitos técnicos, entre outros.
+              </p>
+            </div>
+          </div>
+          <div class="subtopic-h3">
+            <h3>Detalhes Importantes</h3>
+            <p>
+                O Product Backlog está sempre mudando, à medida que novos requisitos são descobertos e antigos são removidos ou reordenados.
+            </p>
+          </div>
+        </div>
+        <div class="subtopic-h2">
+            <h2>Sprint Backlog (Backlog da Sprint)</h2>
+            <picture>
+              <img src="../../images/sprint-backlog.png" alt="Imagem ilustrativa sobre o Sprint Backlog.">
+            </picture>
+            <div class="subtopic-h3">
+              <h3>Descrição</h3>
+              <p>
+                  Durante o Planejamento da Sprint, o time de desenvolvimento escolhe itens do Product Backlog para trabalhar durante a sprint. Esses itens formam o Sprint Backlog. Além disso, o time define um plano para atingir a meta da sprint.
+              </p>
+              <div class="subtopic-h4">
+                <h4>Exemplo</h4>
+                <p>
+                    Um Sprint Backlog pode incluir tarefas como "Desenvolver interface de login" ou "Criar testes automatizados para o módulo de pagamento".
+                </p>
+              </div>
+            </div>
+        </div>
+        <div class="subtopic-h2">
+            <h2>Incremento</h2>
+            <picture>
+              <img src="../../images/incremento.png" alt="Imagem ilustrativa sobre o conceito de incremento na metodologia Scrum.">
+            </picture>
+            <div class="subtopic-h3">
+              <h3>Descrição</h3>
+              <p>
+                  O Incremento é o conjunto de todos os itens concluídos no Sprint Backlog, mais o valor acumulado de todas as sprints anteriores. Um incremento deve ser sempre algo que pode ser usado ou liberado.
+              </p>
+              <div class="subtopic-h4">
+                <h4>Exemplo</h4>
+                <p>
+                    Um incremento pode ser uma nova versão do software com novas funcionalidades e correções de bugs , prontas para serem implementadas no ambiente de produção.
+                </p>
+              </div>
+            </div>
+        </div>
+    </main> 
+
+
+    <!-- quiz -->
+    <section class="quiz">
+      <div class="quiz__overlay">Entre com a sua conta para ter acesso ao questionário!</div>
+      <h2>Avaliação: Artefatos do Scrum</h2>
+      <p>Em conformidade com o que foi exposto até aqui, analise a veracidade das seguintes afirmativas:</p>
+      <form>
+
+        <div class="quiz__question">
+          <p><span class="quiz__question__number">1.</span> Os artefatos no Scrum são ferramentas e produtos intangíveis criados durante o processo.</p>
+          <div class="quiz__question__option">
+            <input type="radio" id="question_1--v" name="question_05.1" value="v">
+            <label for="question_1--v">Verdadeiro</label>
+          </div>
+          <div class="quiz__question__option">
+            <input type="radio" id="question_1--f" name="question_05.1" value="f">
+            <label for="question_1--f">Falso</label>
+          </div>
+        </div>
+
+        <div class="quiz__question">
+          <p><span class="quiz__question__number">2.</span> O Product Backlog é uma lista priorizada de tudo o que precisa ser feito para o produto e é mantido pelo Product Owner.</p>
+          <div class="quiz__question__option">
+            <input type="radio" id="question_1--v" name="question_05.2" value="v">
+            <label for="question_1--v">Verdadeiro</label>
+          </div>
+          <div class="quiz__question__option">
+            <input type="radio" id="question_1--f" name="question_05.2" value="f">
+            <label for="question_1--f">Falso</label>
+          </div>
+        </div>
+
+        <div class="quiz__question">
+          <p><span class="quiz__question__number">3.</span> O Incremento é o conjunto de todos os itens concluídos no Sprint Backlog, mais o valor acumulado de todas as sprints anteriores.</p>
+          <div class="quiz__question__option">
+            <input type="radio" id="question_1--v" name="question_05.3" value="v">
+            <label for="question_1--v">Verdadeiro</label>
+          </div>
+          <div class="quiz__question__option">
+            <input type="radio" id="question_1--f" name="question_05.3" value="f">
+            <label for="question_1--f">Falso</label>
+          </div>
+        </div>
+
+        <button>Submeter</button>
+      </form>
+    </section>
+
+    <!-- home icon
+    <div class="home-icon">
+      <img src="../../images/home-icon.png" alt="Ícone de navegação para a Home Page." />
+    </div>
+    -->
+
+    <!-- navegação alternativa -->
+    <nav class="nav-alt">
+      <a href="./04.html"><button class="nav-alt__previous">Anterior</button></a>
+      <a href="./06.html"><button class="nav-alt__next">Próximo</button></a>
+    </nav>
+
+    <!-- rodapé -->
+    <footer>
+      <address>
+        <img src="../../images/github-icon.png" alt="Ícone do Github." />
+	<a rel="author" href="https://github.com/Capydev-jac">CapyDev</a>
+      </address>
+    </footer>
+
+</body>
+</html>
