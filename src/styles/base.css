@@ -33,6 +33,22 @@ body {
   display: none;
 }
 
+ol, ul {
+  list-style-type: none; /* os espaçamentos dos markers padrão são difíceis de se lidar */
+  margin-block: 8px;
+}
+
+ul > li::before {
+  content: url("../images/capy-marker.png");
+  display: inline-block;
+  margin-inline-end: 8px;
+  vertical-align: middle;
+}
+
+img {
+  display: block;
+}
+
 /* cor ao selecionar texto com o cursor */
 ::selection {
   color: var(--branco-cor);

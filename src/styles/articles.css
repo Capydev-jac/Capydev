@@ -9,23 +9,6 @@ header { /* header sticky somente pra paginas de conteudo, pra home page não fi
   top: 0;
 }
 
-ol, ul {
-  list-style-type: none; /* os espaçamentos dos markers padrão são difíceis de se lidar */
-  margin-block: 8px;
-}
-
-ul > li::before {
-  content: url("../images/capy-marker.png");
-  display: inline-block;
-  margin-inline-end: 8px;
-  vertical-align: middle;
-}
-
-img {
-  display: block;
-}
-
-
 /* barra de navegação */
 .nav-bar {
     position: fixed;
