@@ -4,9 +4,25 @@ let currentUser = localStorage.getItem("currentUser");
 
 /* contas de teste */
 const accounts = [
-  {name: "João", surname: "Silva", email: "joao@fatec.sp.gov.br", password: "capydev"},
-  {name: "Lucas", surname: "Soares", email: "lucas@fatec.sp.gov.br", password: "fatec"},
-]
+  {
+    name: "João",
+    surname: "Silva",
+    email: "joao@fatec.sp.gov.br",
+    password: "capydev",
+    passedQuizzes: {
+
+    },
+  },
+  {
+    name: "Lucas",
+    surname: "Soares",
+    email: "lucas@fatec.sp.gov.br",
+    password: "fatec",
+    passedQuizzes: {
+
+    },
+  },
+];
 
 /* DOM elements */
 const DOM_overlay = document.querySelector(".overlay");
@@ -27,6 +43,13 @@ const DOM_quizOverlay = document.querySelector(".quiz__overlay");
 const DOM_headerPictureContainer = document.querySelector(".nav__login > div");
 const DOM_headerPicture = document.querySelector(".nav__login > div > img");
 const DOM_profileName = document.querySelector(".profile__name");
+const DOM_profileMessage = document.querySelector(".profile__message");
+const DOM_profileNumberOfQuizzes = document.querySelector(".profile__message__number-of-quizzes");
+const DOM_profileCertificateButton = document.querySelector(".profile__certificate");
+
+
+
+/* --------------------------- FUNÇÕES --------------------------- */
 
 /* limpa as mensagens de erro e afins */
 function clearLoginErrorMessages() {
@@ -90,7 +113,38 @@ function getCurrentUser() {
     })(); 
 
     /* profile card */
+    const numberOfPassedQuizzes = Object.entries(currentUserObj.passedQuizzes).length;
+
     DOM_profileName.textContent = `${currentUserObj.name} ${currentUserObj.surname}`;
+    DOM_profileNumberOfQuizzes.textContent = 7 - numberOfPassedQuizzes; /* quantos quizzes falta pro usuário conseguir emitir o seu certificado */
+
+    getQuizReport(); /* gera uma lista com as avaliações que foram concluídas com êxito */
+
+    if (numberOfPassedQuizzes === 7) unlockCertificate();
+
+
+    /* funções auxiliares */
+    function getQuizReport() {
+      let html = `
+      <ul class="profile__quizReport">
+      </ul>
+      `;
+
+      DOM_profileMessage.insertAdjacentHTML("afterend", html); 
+      const DOM_profileQuizReport = document.querySelector(".profile__quizReport");
+      Object.entries(currentUserObj.passedQuizzes).forEach((arr) => {
+        const quizObj = arr[1];
+        console.log(quizObj)
+        html = `<li><b>${quizObj.pageTitle}</b> (<span>✅</span>)</li>` 
+        DOM_profileQuizReport.insertAdjacentHTML("beforeend", html);
+      });
+    }
+
+    function unlockCertificate() {
+      DOM_profileMessage.textContent = "Parabéns! Você foi aprovado em todas as avaliações do curso e seu certificado já está liberado!";
+      DOM_profileMessage.style.textAlign = "center";
+      DOM_profileCertificateButton.classList.remove("profile__certificate--disabled"); 
+    }
   }
 
   function unlockQuiz() {
@@ -98,8 +152,7 @@ function getCurrentUser() {
     DOM_quizOverlay.style.display = "none";
   }
 }
-
-getCurrentUser(); /* atualiza tudo de acordo com o usuário logado assim que o script é carregado */
+/* -------------------- FIM DO BLOCO DE FUNÇÕES ---------------------- */
 
 
 
@@ -146,3 +199,7 @@ DOM_loginButton.addEventListener("click", (e) => {
 })
 
 
+
+/* INIT */
+
+getCurrentUser(); /* atualiza tudo de acordo com o usuário logado assim que o script é carregado */
