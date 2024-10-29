@@ -38,7 +38,7 @@ O curso sobre Scrum será composto por uma série de módulos, cada um abordando
 | RNF.06 | O visual deve ser responsivo. | Como usuário eu quero um visual responsivo e compreensivo apresentando todos os conteúdos relacionado a Metodologia Scrum e seu aprendizados seguindo de forma organizada | Tranformar o tamanho do site de acordo com o tamanho da janela com os conteudos respondendo-a |
 
 <h2>Prototipo do Site</h2>
-<img src="https://github.com/Felipe-ACG/Capydev/blob/main/images/wireframe.PNG">
+<img src="https://github.com/Felipe-ACG/Capydev/blob/main/docs/images/wireframe.PNG">
 
 <h2>Ferramentas Utilizadas</h2>
 <div>
