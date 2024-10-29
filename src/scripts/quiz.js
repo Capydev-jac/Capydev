@@ -1,73 +1,77 @@
-// Definir o nome de usuário e senha fixos para fins de demonstração
-const validUsername = "admin";
-const validPassword = "1234";
+"use strict";
 
-document.getElementById('form-login').addEventListener('submit', function(event) {
-    event.preventDefault(); // Impede o envio do formulário
+const DOM_quizSubmitButton = document.querySelector(".quiz > form > button"); 
 
-    const username = document.getElementById('username').value;
-    const password = document.getElementById('password').value;
+let DOM_checkedRadioInputs;
 
-    if (username === validUsername && password === validPassword) {
-        // Exibe as questões e remove o blur
-        const questaoContainer = document.getElementById('questao-container');
-        questaoContainer.style.display = 'block';
-        questaoContainer.classList.remove('blur'); // Remove a classe blur
+const pageNumber = document.getElementById("question_1--v").getAttribute("name").split("_")[1].slice(0, 2);
 
-        document.getElementById('login-form').style.display = 'none';
-        document.getElementById('login-message').textContent = 'Login bem-sucedido! Agora você pode acessar as questões.';
-        document.getElementById('login-message').style.color = 'green';
+const correctAnswers = {
+  "pag02": ["f", "v", "v"],
+  "pag03": ["v", "v", "v"],
+  "pag04": ["f", "v", "f"],
+  "pag05": ["f", "v", "v"],
+  "pag06": ["v", "f", "v"],
+  "pag07": ["v", "f", "v"],
+  "pag08": ["f", "f", "v"],
+}
+
+let score = 0; /* vai ser um numero de 0 a 3 */
+let userAnswers = [];
+
+/* funções */
+function getUserAnswers() {
+  console.log(DOM_checkedRadioInputs);
+  DOM_checkedRadioInputs.forEach((radioInput) => userAnswers.push(radioInput.value)); /* itera sobre os círculos checados e extrai o valor */ 
+  console.log(userAnswers);
+}
+
+function checkUserAnswers() {
+  userAnswers.forEach((answer, index) => {
+    const label = Array.from(document.querySelectorAll(".quiz__question label")).find((label) => label.getAttribute("for") === DOM_checkedRadioInputs[index].getAttribute("id"));
+
+    if (answer === correctAnswers[`pag${pageNumber}`][index]) {
+      score++;
+      label.insertAdjacentHTML("afterend", `<span class="quiz__answer-marker"> ✅ </span>`);
     } else {
-        // Exibe mensagem de erro
-        document.getElementById('login-message').textContent = 'Usuário ou senha incorretos. Tente novamente.';
-        document.getElementById('login-message').style.color = 'red';
+      label.insertAdjacentHTML("afterend", `<span class="quiz__answer-marker"> ❌ </span>`);
     }
-});
+  });
 
-// Avaliar respostas e salvar no localStorage
-let quizCompleted = false; // Variável para controlar se a avaliação foi completada
+  checkIfUserPassed();
 
-document.getElementById('questao-form').addEventListener('submit', function(event) {
-    event.preventDefault();
 
-    // Se a avaliação já foi completada, não faz nada
-    if (quizCompleted) {
-        return;
-    }
+  /* func aux */
+  function checkIfUserPassed() {
+   if (score >= 2) {
+     DOM_quizSubmitButton.style.backgroundColor = "slategray";
+     DOM_quizSubmitButton.disabled = "true";
+     DOM_quiz.style.pointerEvents = "none";
+     DOM_quiz.style.opacity = "0.6";
 
-    // Respostas corretas
-    const respostasCorretas = {
-        questao1: "falso",
-        questao2: "verdadeiro",
-        questao3: "falso"
-    };
+     DOM_quiz.insertAdjacentHTML("beforeend", `<div class="quiz__result quiz__result--passed">Aprovado!</div>`); 
+    } 
+  }
+}
 
-    let pontuacao = 0;
-    const respostasUsuario = new FormData(this);
+function clear() {
+  /* remove os markers */
+  Array.from(document.querySelectorAll(".quiz__answer-marker")).forEach((marker) => marker.remove());
 
-    for (let [questao, resposta] of respostasUsuario.entries()) {
-        if (resposta === respostasCorretas[questao]) {
-            pontuacao++;
-        }
-    }
+  /* zera a pontuação */
+  score = 0;
 
-    const resultado = document.getElementById('resultado');
-    const totalQuestões = Object.keys(respostasCorretas).length;
-    const percentual = (pontuacao / totalQuestões) * 100;
+  /* limpa o array de respostas do usuário */
+  userAnswers = [];
+}
 
-    resultado.innerHTML = `<h3>Você acertou ${pontuacao} de ${totalQuestões} questões (${percentual.toFixed(2)}%)</h3>`;
 
-    // Verifica se o percentual é igual ou maior que 66%
-    if (percentual >= 66) {
-        resultado.innerHTML += `<p>Você acertou 66% ou mais. As questões estão travadas agora.</p>`;
-        quizCompleted = true; // Marca a avaliação como completada
-        document.getElementById('questao-form').style.display = 'none';
-    } else if (percentual >= 80) {
-        resultado.innerHTML += `<p>Parabéns! Você obteve a pontuação necessária para o certificado.</p>`;
-        setTimeout(() => {
-            window.location.href = 'pag4.html'; // Mude para a página desejada
-        }, 2000); // Aguardar 2 segundos antes do redirecionamento
-    } else {
-        resultado.innerHTML += `<p>Você precisa de pelo menos 66% de acerto. Tente novamente!</p>`;
-    }
-});
+DOM_quizSubmitButton.addEventListener("click", (e) => {
+  e.preventDefault();
+  clear(); /* caso o usuário esteja refazendo o quiz na mesma sessão */
+  
+  DOM_checkedRadioInputs = Array.from(document.querySelectorAll('input[type="radio"]')).filter((input) => input.checked); /* querySelectorAll pega tudo de cima pra baixo, ordem já vai estar correta */
+
+  getUserAnswers();
+  checkUserAnswers();
+})

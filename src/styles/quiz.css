@@ -93,6 +93,26 @@ input[value="f"] {
   accent-color: red;
 }
 
+.quiz__answer-marker {
+  position: relative;
+  top: -1.5px;
+  margin-inline-start: 6px;
+  font-size: 15px;
+}
+
+.quiz__result {
+  position: absolute;
+  right: 10px;
+  bottom: 8px;
+  font-weight: 900;
+  font-size: 20px;
+}
+
+.quiz__result--passed {
+  color: green; 
+  letter-spacing: 1px;
+}
+
 
 /* responsividade */
 @media only screen and (max-width: 650px) {
