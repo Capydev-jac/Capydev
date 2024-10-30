@@ -11,104 +11,22 @@
     <link rel="stylesheet" href="../../styles/footer.css">
     <link rel="stylesheet" href="../../styles/articles.css">
     <link rel="stylesheet" href="../../styles/quiz.css">
+    <!-- dados -->
+    <script defer src="../../scripts/data.js"></script>
+    <!-- scripts de geração de conteudo dinamico -->
+    <script defer src="../../scripts/templates/header.js"></script>
+    <script defer src="../../scripts/templates/footer.js"></script>
+    <script defer src="../../scripts/templates/login-signup-template.js"></script>
+    <script defer src="../../scripts/templates/profile.js"></script>
+    <script defer src="../../scripts/templates/nav-bar-articles.js"></script>
+    <script defer src="../../scripts/templates/nav-alt-articles.js"></script>
+    <script defer src="../../scripts/templates/quiz-template.js"></script>
+    <!-- scripts gerais de interação -->
     <script defer src="../../scripts/login-signup.js"></script>
     <script defer src="../../scripts/quiz.js"></script>
 </head>
-<body>
-    <!-- overlay -->
-    <div class="overlay hidden"></div>
-    
 
-    <!-- modal de login -->
-    <div class="login-component hidden">
-      <div class="close-button">×</div>
-      <form action="POST">
-        <h2>Login</h2>
-        <div class="login__email-field input-field">
-          <label for="login__email">Email</label>
-          <input id="login__email" type="email" name="email" placeholder="Insira seu email"/>
-        </div>
-        <div class="login__password-field input-field">
-          <label for="login__password">Senha</label>
-          <input id="login__password" type="password" name="password" placeholder="Insira sua senha"/>
-        </div>
-        <button>Entrar</button>
-      </form>
-      <div class="register-redirect">Ainda não tem uma conta? <span class="register-redirect__button">Cadastre-se</span> agora!</div>
-    </div>
-    
-
-    <!-- modal de cadastro -->
-    <div class="signup-component hidden">
-      <div class="close-button">×</div>
-      <form action="POST">
-        <h2>Cadastro</h2>
-        <div class="signup__name-field input-field">
-          <label for="signup__firstname">Nome Completo</label>
-          <div class="signup__name-field__inputs">
-            <input id="signup__firstname" type="text" name="first-name" placeholder="Nome" />
-            <input id="signup__lastname" type="text" name="surname" placeholder="Sobrenome">
-          </div>
-        </div>
-        <div class="signup__email-field input-field">
-          <label for="signup__email">Email</label>
-          <input id="signup__email" type="email" name="email" placeholder="Insira seu email"/>
-        </div>
-        <div class="signup__password-field input-field">
-          <label for="signup__password">Senha</label>
-          <input id="signup__password" type="password" name="password" placeholder="Insira sua senha"/>
-          <input id="signup__password-confirm" type="password" placeholder="Confirme sua senha"/>
-          <!-- sem o atributo "name" pq o campo de confirmação não tem valor pro formulário em si -->
-        </div>
-        <button>Cadastrar-se</button>
-      </form>
-      <div class="login-redirect">Já possui registro? <span class="login-redirect__button">Entre</span> com a sua conta!</div>
-    </div>
-
-    
-    <!-- modal de perfil (só aparece caso o user esteja logado) --> 
-    <div class="profile-component hidden">
-      <div class="close-button">×</div>
-      <picture>
-        <img src="../../images/capy-pfp.webp" alt="Avatar genérico de capivara." />
-      </picture>
-      <div class="profile__name"></div>
-      <p class="profile__message">Você precisa obter, no mínimo, 80% de acertos em mais <span class="profile__message__number-of-quizzes">7</span> de 7 questionários para emitir o seu certificado!</p>
-      <button class="profile__certificate profile__certificate--disabled">Certificado</button>
-      <div class="profile__account-actions">
-        <button class="profile__logoff">Sair</button>
-        <button class="profile__delete">Deletar Conta</button>
-      </div>
-    </div>
-
-
-    <!-- cabeçalho --> 
-    <header>
-      <nav>
-        <a class="nav__logo" href="../../../index.html">
-          <img src="../../images/logo.png" alt="Logo da equipe CapyDev.">
-        </a>
-        <div class="nav__login">
-          <span>Entrar</span>
-          <div data-context="article"><img src="../../images/login-icon.png" alt="Icone generico de login." /></div>
-        </div>
-      </nav>
-    </header>
-
-
-    <!-- barra de navegação -->
-    <nav class="nav-bar">
-        <a href="./01.html" class="nav-bar__circle" title="Introdução ao Curso Scrum"></a>
-        <a href="./02.html" class="nav-bar__circle nav-bar__circle--selected" title="O que é Scrum"></a>
-        <a href="./03.html" class="nav-bar__circle" title="Pilares do Scrum"></a>
-        <a href="./04.html" class="nav-bar__circle" title="Papeis do Scrum"></a>
-        <a href="./05.html" class="nav-bar__circle" title="Artefatos do Scrum"></a>
-        <a href="./06.html" class="nav-bar__circle" title="Eventos do Scrum"></a>
-        <a href="./07.html" class="nav-bar__circle" title="Definição de Pronto"></a>
-        <a href="./08.html" class="nav-bar__circle" title=" Vantagens do Scrum"></a>
-    </nav>
-
-
+<body data-context="article">
     <!-- bloco de conteudo -->
     <!-- o caminho relativo pro folder de imagens é: 
     "../../images/nome_da_imagem.png" -->
@@ -161,74 +79,5 @@
             </div>
         </div>
     </main> 
-
-
-    <!-- quiz -->
-    <section class="quiz">
-      <div class="quiz__overlay">Entre com a sua conta para ter acesso ao questionário!</div>
-      <h2>Avaliação: O que é o Scrum?</h2>
-      <p>Em conformidade com o que foi exposto até aqui, analise a veracidade das seguintes afirmativas:</p>
-      <form>
-
-        <div class="quiz__question">
-          <p><span class="quiz__question__number">1.</span> O scrum é um framework ágil que pode ser utilizado apenas no desenvolvimento de software.</p>
-          <div class="quiz__question__option">
-            <input type="radio" id="question_1--v" name="question_02.1" value="v">
-            <label for="question_1--v">Verdadeiro</label>
-          </div>
-          <div class="quiz__question__option">
-            <input type="radio" id="question_1--f" name="question_02.1" value="f">
-            <label for="question_1--f">Falso</label>
-          </div>
-        </div>
-
-        <div class="quiz__question">
-          <p><span class="quiz__question__number">2.</span> O Scrum enfatiza a colaboração contínua entre equipes e stakeholders para garantir que o produto atenda às necessidades do cliente.</p>
-          <div class="quiz__question__option">
-            <input type="radio" id="question_2--v" name="question_02.2" value="v">
-            <label for="question_2--v">Verdadeiro</label>
-          </div>
-          <div class="quiz__question__option">
-            <input type="radio" id="question_2--f" name="question_02.2" value="f">
-            <label for="question_2--f">Falso</label>
-          </div>
-        </div>
-
-        <div class="quiz__question">
-          <p><span class="quiz__question__number">3.</span> O Scrum busca melhorar a produtividade por meio de entregas frequentes e incrementais.</p>
-          <div class="quiz__question__option">
-            <input type="radio" id="question_3--v" name="question_02.3" value="v">
-            <label for="question_3--v">Verdadeiro</label>
-          </div>
-          <div class="quiz__question__option">
-            <input type="radio" id="question_3--f" name="question_02.3" value="f">
-            <label for="question_3--f">Falso</label>
-          </div>
-        </div>
-
-        <button>Submeter</button>
-      </form>
-    </section>
-
-    <!-- home icon
-    <div class="home-icon">
-      <img src="../../images/home-icon.png" alt="Ícone de navegação para a Home Page." />
-    </div>
-    -->
-
-    <!-- navegação alternativa -->
-    <nav class="nav-alt">
-      <a href="./01.html"><button class="nav-alt__previous">Anterior</button></a>
-      <a href="./03.html"><button class="nav-alt__next">Próximo</button></a>
-    </nav>
-
-    <!-- rodapé -->
-    <footer>
-      <address>
-        <img src="../../images/github-icon.png" alt="Ícone do Github." />
-	<a rel="author" href="https://github.com/Capydev-jac">CapyDev</a>
-      </address>
-    </footer>
-
 </body>
 </html>

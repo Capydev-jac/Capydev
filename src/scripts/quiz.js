@@ -1,25 +1,10 @@
 "use strict";
 
 /* ---------------- VARIÁVEIS ------------------ */
-const DOM_quizSubmitButton = document.querySelector(".quiz > form > button"); 
 
 let DOM_checkedRadioInputs;
-
-const pageNumber = document.getElementById("question_1--v").getAttribute("name").split("_")[1].slice(0, 2);
-
-const correctAnswers = {
-  "pag02": ["f", "v", "v"],
-  "pag03": ["v", "v", "v"],
-  "pag04": ["f", "v", "f"],
-  "pag05": ["f", "v", "v"],
-  "pag06": ["v", "f", "v"],
-  "pag07": ["v", "f", "v"],
-  "pag08": ["f", "f", "v"],
-}
-
 let score = 0; /* vai ser um numero de 0 a 3 */
 let userAnswers = [];
-
 
 
 /* --------------------------- FUNÇÕES --------------------------- */
@@ -42,7 +27,7 @@ function checkUserAnswers() {
   userAnswers.forEach((answer, index) => {
     const label = Array.from(document.querySelectorAll(".quiz__question label")).find((label) => label.getAttribute("for") === DOM_checkedRadioInputs[index].getAttribute("id"));
 
-    if (answer === correctAnswers[`pag${pageNumber}`][index]) {
+    if (answer === correctAnswers[`pag0${pageNumber}`][index]) {
       score++;
       label.insertAdjacentHTML("afterend", `<span class="quiz__answer-marker"> ✅ </span>`);
     } else {
