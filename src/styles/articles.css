@@ -47,7 +47,7 @@ main {
     border: 2px solid var(--verde-escuro-cor);
     padding-block: 24px;
     padding-inline: clamp(16px, 4.131vw + 0.507px, 60px);
-    margin-inline: clamp(62px, 14.048vw - 22.286px, 180px);
+    margin-inline: clamp(62px, 18.74vw - 59.811px, 300px); /* 1920px --> 650px */
     margin-block: 40px;
     font-size: clamp(1rem, 0.868rem + 0.5634vw, 1.375rem); /* 1440px --> 375px, 22px --> 16px */
     text-align: justify;

@@ -3,7 +3,10 @@ main {
   background: linear-gradient(to bottom, var(--verde-claro-cor), var(--verde-cor));
   display: grid;
   grid-template-columns: 6fr 4fr;
-  gap: 20px;
+  grid-auto-rows: max-content;
+  align-content: center;
+  align-items: start;
+  gap: clamp(0px, -3.623vw + 69.565px, 20px); /* 1920px --> 1368px */
   grid-template-areas: 
   'intro image'
   'table image'
@@ -31,7 +34,8 @@ main {
 
 .main__intro > p {
   text-align: justify;
-  font-size: 17px;
+  font-size: clamp(17px, 0.725vw + 7.087px, 21px); /* 1920px --> 1368px */
+  padding-inline: clamp(0px, 14.493vw - 198.261px, 80px); /* 1920px --> 1368px */
 }
 
 .main__table-of-contents {
@@ -44,7 +48,6 @@ main {
   text-align: justify;
   margin-block-end: 30px;
   justify-self: center;
-  align-self: center;
 }
 
 .main__table-of-contents > h2 {
