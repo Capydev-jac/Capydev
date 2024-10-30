@@ -66,6 +66,7 @@ main {
   grid-area: image;
   display: flex;
   align-items: center;
+  align-self: center;
 }
 
 .main__image > img {
