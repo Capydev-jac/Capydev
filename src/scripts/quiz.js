@@ -9,9 +9,7 @@ let userAnswers = [];
 
 /* --------------------------- FUNÇÕES --------------------------- */
 function getUserAnswers() {
-  console.log(DOM_checkedRadioInputs);
   DOM_checkedRadioInputs.forEach((radioInput) => userAnswers.push(radioInput.value)); /* itera sobre os círculos checados e extrai o valor */ 
-  console.log(userAnswers);
 }
 
 function blockQuiz() {
@@ -43,7 +41,17 @@ function checkUserAnswers() {
    if (score >= 2) {
     blockQuiz();
     saveQuizState();
+   } else {
+    /* bloqueia o botão */
+    DOM_quizSubmitButton.style.backgroundColor = "slategray"; 
+    DOM_quizSubmitButton.style.pointerEvents = "none";
+
+    /* depois de 2 segundos, reseta o quiz para a próxima tentativa */
+    setTimeout(() => {
+      resetQuiz();
+    }, 2000)
    }
+
     /* salvar "estado" de aprovação no localStorage */
     function saveQuizState() {
       const userObj = JSON.parse(localStorage.getItem("currentUser"));
@@ -77,10 +85,13 @@ function restoreQuizState() {
   checkUserAnswers();
 }
 
-function clear() {
+function resetQuiz() {
+  /* reativa o botão */
+  DOM_quizSubmitButton.style = "";
+
   /* remove os markers */
   Array.from(document.querySelectorAll(".quiz__answer-marker")).forEach((marker) => marker.remove());
-
+  Array.from(document.querySelectorAll('input[type="radio"]')).forEach((radio) => radio.checked = false);
   /* zera a pontuação */
   score = 0;
 
@@ -93,10 +104,10 @@ function clear() {
 /* EVENT LISTENERS!!! */
 DOM_quizSubmitButton.addEventListener("click", (e) => {
   e.preventDefault();
-  clear(); /* caso o usuário esteja refazendo o quiz na mesma sessão */
   
   DOM_checkedRadioInputs = Array.from(document.querySelectorAll('input[type="radio"]')).filter((input) => input.checked); /* querySelectorAll pega tudo de cima pra baixo, ordem já vai estar correta */
 
+  if (DOM_checkedRadioInputs.length !== 3) return; /* só faz a checagem se o usuário tiver respondido todas as questões*/
   getUserAnswers();
   checkUserAnswers();
 })

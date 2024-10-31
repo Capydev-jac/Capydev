@@ -110,6 +110,7 @@ input[value="f"] {
 
 .quiz__result--passed {
   color: green; 
+  text-transform: uppercase;
   letter-spacing: 1px;
 }
 

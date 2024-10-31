@@ -1,7 +1,7 @@
 "use strict";
 
 function genLoginSignup() {
-    if (localStorage.getItem(currentUser)) return;
+    if (currentUser) return; /* não tem modal de login/cadastro pra user já logado!! */
     let html = `
     <div class="login-component hidden">
       <div class="close-button">×</div>

@@ -1,11 +1,10 @@
 "use strict";
 
-function genFooter(context) {
-    const imagePath = (context === "home") ? "./src/images/" : (context === "article") ? "../../images/" : "";
+function genFooter() {
     const html = `
     <footer>
         <address>
-            <img src="${imagePath}github-icon.png" alt="Ícone do Github." />
+            <img src="${imagesPath}github-icon.png" alt="Ícone do Github." />
             <a rel="author" href="https://github.com/Capydev-jac">CapyDev</a>
         </address>
     </footer>
@@ -16,4 +15,4 @@ function genFooter(context) {
 
 
 /* INIT */
-genFooter(document.body.dataset.context);  
+genFooter();  

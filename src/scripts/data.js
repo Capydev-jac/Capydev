@@ -24,7 +24,7 @@ const accounts = [
 
 const questions = {
   pag02: [
-  "O scrum é um framework ágil que pode ser utilizado apenas no desenvolvimento de software.",
+  "O Scrum é um framework ágil que pode ser utilizado apenas no desenvolvimento de software.",
   "O Scrum enfatiza a colaboração contínua entre equipes e stakeholders para garantir que o produto atenda às necessidades do cliente.",
   "O Scrum busca melhorar a produtividade por meio de entregas frequentes e incrementais."
   ],

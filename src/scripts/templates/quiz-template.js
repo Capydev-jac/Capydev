@@ -65,9 +65,11 @@ const DOM_quizOverlay = document.querySelector(".quiz__overlay");
 const DOM_quizSubmitButton = document.querySelector(".quiz > form > button");
 
 
+/* funções */
 function unlockQuiz() {
   DOM_quizOverlay.remove();
   DOM_quiz.style.pointerEvents = "initial";
 }
 
+/* chama a função unlockQuiz se o usuário estiver logado */
 if (currentUser) unlockQuiz();

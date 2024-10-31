@@ -2,20 +2,15 @@
 
 if (!currentUser) throw new Error(); /* termina o script se não tiver ninguém logado (users não logados não tem perfil) */
 
-const numberOfPassedQuizzes = Object.entries(JSON.parse(currentUser).passedQuizzes).length; // global, mas não precisaria, acho
-
-function genProfile(context) {
-    if (!currentUser) return;
-    const currentUserObj = JSON.parse(currentUser);
-    const imagePath = (context === "home") ? "./src/images/" : (context === "article") ? "../../images/" : "";
-
+/* função que gera o componente de perfil */
+function genProfile() {
     const html = `
     <div class="profile-component hidden">
         <div class="close-button">×</div>
         <picture>
-            <img src="${imagePath}capy-pfp.webp" alt="Avatar genérico de capivara." />
+            <img src="${imagesPath}capy-pfp.webp" alt="Avatar genérico de capivara." />
         </picture>
-        <div class="profile__name"></div>
+        <div class="profile__name">${currentUserObj.name} ${currentUserObj.surname}</div>
         <p class="profile__message">Você precisa obter, no mínimo, 80% de acertos em mais <span class="profile__message__number-of-quizzes">${7 - numberOfPassedQuizzes}</span> de 7 questionários para emitir o seu certificado!</p>
         <button class="profile__certificate profile__certificate--disabled">Certificado</button>
         <div class="profile__account-actions">
@@ -25,12 +20,12 @@ function genProfile(context) {
     </div>
     `
 
-    document.querySelector(".signup-component").insertAdjacentHTML("afterend", html);
+    document.querySelector(".overlay").insertAdjacentHTML("afterend", html);
 }
 
 
 /* INIT */
-genProfile(document.body.dataset.context);
+genProfile();
 
 /* VARIÁVEIS */
 const DOM_logoffButton = document.querySelector(".profile__logoff");
@@ -40,14 +35,22 @@ const DOM_profileMessage = document.querySelector(".profile__message");
 const DOM_profileNumberOfQuizzes = document.querySelector(".profile__message__number-of-quizzes");
 const DOM_profileCertificateButton = document.querySelector(".profile__certificate");
 
+/* pequenos detalhes */
+initProfile(); /* definida abaixo */
 
-/* detalhes */
+/* EVENT LISTENERS */
+DOM_profileCertificateButton.addEventListener("click", (e) => {
+  if (DOM_profileCertificateButton.classList.contains("profile__certificate--disabled")) return;
+  getCertificate();
+});
+
+
+/* funções */
 function initProfile() {
-    const currentUserObj = JSON.parse(currentUser);
     DOM_logoffButton.addEventListener("click", logoff);
-
     if (numberOfPassedQuizzes !== 0) genReport();
-    if (numberOfPassedQuizzes === 7) unlockCertificate();
+    if (numberOfPassedQuizzes === 7) unlockCertificateButton();
+
 
 
     /* funções auxiliares */
@@ -66,17 +69,48 @@ function initProfile() {
         const DOM_profileQuizReport = document.querySelector(".profile__quizReport");
         Object.entries(currentUserObj.passedQuizzes).forEach((arr) => {
             const quizObj = arr[1];
-            console.log(quizObj)
             html = `<li><b>${quizObj.pageTitle}</b> (<span>✅</span>)</li>` 
             DOM_profileQuizReport.insertAdjacentHTML("beforeend", html);
         });
     }
 
-    function unlockCertificate() {
+    function unlockCertificateButton() {
         DOM_profileMessage.textContent = "Parabéns! Você foi aprovado em todas as avaliações do curso e seu certificado já está liberado!";
         DOM_profileMessage.style.textAlign = "center";
         DOM_profileCertificateButton.classList.remove("profile__certificate--disabled"); 
+
     }
 }
 
-initProfile();
+function getCertificate() {
+  /* carrega o jspdf, cria o certificado e armazena no localStorage */  
+  let certificate;
+  const certificateName = `${currentUserObj.name} ${currentUserObj.surname}`;
+
+  const jspdfScript = document.createElement("script");
+  const templateImage = document.createElement("img");
+
+  loadResourcePromisified(jspdfScript, `${scriptsPath}/external/jspdf.js`)
+  .then(() => {
+    certificate = new jspdf.jsPDF("landscape");
+    return loadResourcePromisified(templateImage, `${imagesPath}certificate-template.jpeg`);
+  })
+  .then(() => {
+    const pageWidth = certificate.internal.pageSize.getWidth();
+    const pageHeight = certificate.internal.pageSize.getHeight();
+    certificate.addImage(templateImage, "JPEG", 0, 0, pageWidth, pageHeight);
+    const textWidth = certificate.getTextWidth(certificateName);
+    const xPos = (pageWidth - textWidth) / 2.54;
+    certificate.setFont("Times", "bolditalic");
+    certificate.setFontSize(40);
+    certificate.setTextColor(136, 189, 188);
+    certificate.text(certificateName, xPos, pageHeight / 2.1);
+    certificate.save("certificado-scrum.pdf");
+  })
+        
+  document.head.appendChild(jspdfScript);
+  document.head.appendChild(templateImage); // adicionando no <head> pra não ficar visível hihi
+}
+
+
+

@@ -17,6 +17,8 @@ function login() {
   clearLoginErrorMessages();
 
   const userObj = accounts.find((obj) => DOM_loginEmailField.value === obj.email);
+
+  /* mensagens de erro de login */
   if (!userObj) {
     DOM_loginEmailField.classList.add("input-error");
     DOM_loginPasswordField.value = '';
@@ -29,7 +31,9 @@ function login() {
     DOM_loginPasswordField.insertAdjacentHTML('afterend', `<div class="input-error-msg">Senha incorreta.</div>`)
     return;
   };
-  localStorage.clear();
+
+
+  localStorage.clear(); /* limpa o localStorage antes de logar o user, só de precaução */
   localStorage.setItem("currentUser", JSON.stringify(userObj)); // adiciona o user logado no cachê do browser
   location.reload(); // recarrega a página
 }
@@ -43,7 +47,8 @@ function login() {
 DOM_navLogin.addEventListener("click", (e) => {
   e.preventDefault();
   DOM_overlay.classList.remove("hidden");
-  (currentUser) ? DOM_profileModal.classList.remove("hidden") : DOM_loginModal.classList.remove("hidden");
+  if (!currentUser) DOM_loginModal.classList.remove("hidden");
+  if (currentUser) DOM_profileModal.classList.remove("hidden");
 });
 
 /* fecha as modais de login, sign up e profile ao clicar no X */
@@ -51,28 +56,28 @@ DOM_navLogin.addEventListener("click", (e) => {
 Array.from(DOM_closeButtons).forEach((button) => {
   button.addEventListener("click", (e) => {
     DOM_overlay.classList.add("hidden");
-    DOM_loginModal.classList.add("hidden");
-    DOM_signupModal.classList.add("hidden");
-    if (DOM_profileModal) DOM_profileModal.classList.add("hidden");
+    if (!currentUser) DOM_loginModal.classList.add("hidden");
+    if (!currentUser) DOM_signupModal.classList.add("hidden");
+    if (currentUser) DOM_profileModal.classList.add("hidden");
     clearLoginErrorMessages();
   });
 });
 
 /* fecha o login e abre o sign up ao clicar no "cadastre-se" na modal de login */
-DOM_registerRedirectButton.addEventListener("click", (e) => {
+if (!currentUser) DOM_registerRedirectButton.addEventListener("click", (e) => {
   DOM_loginModal.classList.add("hidden");
   DOM_signupModal.classList.remove("hidden");
 });
 
 /* fecha o sign up e abre o login ao clicar no "entre" na modal de sign up*/
-DOM_loginRedirectButton.addEventListener("click", (e) => {
+if (!currentUser) DOM_loginRedirectButton.addEventListener("click", (e) => {
   DOM_signupModal.classList.add("hidden");
   DOM_loginModal.classList.remove("hidden");
   clearLoginErrorMessages();
 });
 
 /* loga + faz com que o botão não submeta o formulário */
-DOM_loginButton.addEventListener("click", (e) => {
+if (!currentUser) DOM_loginButton.addEventListener("click", (e) => {
   e.preventDefault();
   login();
 })

@@ -1,7 +1,5 @@
 "use strict";
 
-const pageNumber = +window.location.href.split("/").at(-1).slice(1, 2); // é usado em varios outros scripts!!!
-
 function genNavBar(pageNumber) {
     let html = `
     <nav class="nav-bar">
@@ -17,6 +15,7 @@ function genNavBar(pageNumber) {
     `
 
     document.querySelector(`${(currentUser) ? ".profile-component" : ".signup-component"}`).insertAdjacentHTML("afterend", html);
+    /* se o user estiver logado, .signup-component não existe, por isso a condicional */
     
     Array.from(document.querySelectorAll(".nav-bar > a")).find((circleLink) => circleLink.getAttribute("href").indexOf(`0${pageNumber}`) !== -1).classList.add("nav-bar__circle--selected");
 }
