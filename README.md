@@ -30,3 +30,15 @@
 
 <h2 align="center">Sprint Retrospective</h2>
 
+<h4 align="center">
+  <div><i>Na nossa segunda sprint começamos com muito trabalho a ser feito, pois dessa vez exigia muito mais de cada um do que antes, rapidamente organizamos o trello, as tarefas a serem feitas e manutenções no Github, com um diferencial nessa sprint em relação a outra é que organizamos as tarefas por cada pessoa no grupo, para melhor eficiencia na distribuição do trabalho.</i></div>
+<br>
+  <div><i>Nos primeiros dias definimos uma "base" para todas as paginas de conteudo, para que quando cada um fosse fazer uma pagina correspondente, ja tivesse uma base para as pessoas trabalharem por cima disso com mais facilidade, uma base que continha o fundo, cabeçalho e responsividade correpondente.</i></div>
+<br>
+<div><i>Teve partes que foram bem complexas para o nosso conhecimento, principalmente a parte de gerar o certificado de conclusão, e alguns scripts relacionados aos questionarios, isso levou bastante dias para conseguir implementar isso de verdade, mas isso foi uma boa parte dessa sprint pelo motivo de temos conseguido trabalhar ainda mais em equipe resolvendo esses problemas juntos.</i></div>
+<br>
+<div><i>Em relação ao Github e ao grafico burndown, seguiu basicamente a mesma coisa que a primeira sprint, o Github organizado corretamente e o grafico com o decaimento padrão, mostrando que ainda mantemos a nossa consistencia no projeto.</i></div>
+<br>
+<div><i>Teve uma enorme evolução na nossa equipe, todos aqui trabalharam e ajudaram no projeto tanto na teoria quanto na pratica, igualmente, o fato da nossa organização ter ficado melhor, dividindo tarefas para cada um individualmente, fez que todos trabalharam em uma parte do proejto, para que no final tudo junte e apresente o resultado final.</i></div>
+<br>
+<div><i>A Conclusão é que foi definitivamente mais dificil que a primeira, muitos desafios, e muitos obsctaculos, mas nós conseguimos nos manter na nossa consistencia, cada um fazendo sua parte, e quando necessario todos se juntavam para ajeitar um problema ou resolver algo que alguem tava com dificuldade, o resultado final ficou muito satisfatorio conseguindo ir para a direção correta em questao de design tecnico, aprendizado e cooperação. </i></div>
