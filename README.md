@@ -1,7 +1,7 @@
 <h2 align="center">2ª sprint Backlog</h2>
 
 <h4 align="center">
-  <a href="">Link da Sprint Review</a>
+  <a href="https://www.youtube.com/watch?v=-ciH0e_olu4">Link da Sprint Review</a>
 </h4>
 
 <h4 align="center">
@@ -27,6 +27,10 @@
 | RNF.06| 🟢 Baixa | João Victor, Felipe Adriano, Gabriel Frois, Lucas Soares, Bruno Prince, Gabriel Camargo|O visual deve ser responsivo.| Como usuário eu quero um visual responsivo e compreensivo apresentando todos os conteúdos relacionado a Metodologia Scrum e seu aprendizados seguindo de forma organizada | Tranformar o tamanho do site de acordo com o tamanho da janela com os conteudos respondendo-a |
 
 <h2 align="center">Burndown</h2>
+
+<p align="center">
+  <img src="https://github.com/Capydev-jac/Capydev/blob/main/docs/images/grafico_burndown_2.jpeg">
+</p>
 
 <h2 align="center">Sprint Retrospective</h2>
 
