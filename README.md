@@ -40,6 +40,17 @@ O curso sobre Scrum será composto por uma série de módulos, cada um abordando
 <h2>Prototipo do Site</h2>
 <img src="https://github.com/Felipe-ACG/Capydev/blob/main/docs/images/wireframe.PNG">
 
+<h2>Diagramas UML</h2>
+
+<h3>Diagrama de Caso e Uso</h3>
+<img src="https://github.com/Capydev-jac/Capydev/blob/main/docs/images/Diagrama_CasoUso.PNG">
+
+<h3>Diagrama de Classe</h3>
+<img src="https://github.com/Capydev-jac/Capydev/blob/main/docs/images/Diagrama_Classe.PNG">
+
+<h3>Diagrama de Sequência</h3>
+<img src="https://github.com/Capydev-jac/Capydev/blob/main/docs/images/Diagrama_Sequencia.PNG">
+
 <h2>Ferramentas Utilizadas</h2>
 <div>
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original-wordmark.svg", width="40", heigth="40"/>
