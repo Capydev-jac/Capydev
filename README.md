@@ -1,11 +1,7 @@
 <h2 align="center">3ª sprint Backlog</h2>
 
 <h4 align="center">
-  <a href="">Link da Sprint Review</a>
-</h4>
-
-<h4 align="center">
-  <a href="" target="_blank">Link para o Trello da Sprint</a>
+  <a href="https://trello.com/b/YOPwfbq0/sprint-3" target="_blank">Link para o Trello da Sprint</a>
 </h4>
 
 | Id | Prioridade | Responsaveis | Função | User Stories | Definition of Done |
