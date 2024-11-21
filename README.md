@@ -1,6 +1,10 @@
 <h2 align="center">3ª sprint Backlog</h2>
 
 <h4 align="center">
+  <a href="">Link da Sprint Review</a>
+</h4>
+
+<h4 align="center">
   <a href="https://trello.com/b/YOPwfbq0/sprint-3" target="_blank">Link para o Trello da Sprint</a>
 </h4>
 
@@ -23,4 +27,15 @@
 <h2 align="center">Sprint Retrospective</h2>
 
 <h4 align="center">
+  <div><i>Nessa terceira sprint com certeza foi a mais dificil até agora, pois dessa vez o conhecimento necessario para nós aplicarmos os requisitos era bem maior, conseguir sincronizar o back-end com o front-end foi uma tarefa extremamente complexa para os nosso parametros até o momento, além das  manutenções no Github e Burndown, ainda estamos passando por dificuldades por varios fatores que são: falta de conhecimento sobre o assunto. Ser a menor sprint de todas, mesmo demandando muito tempo para desenvolve-la. e a carga de conhecimento que nós recebemos era demais para compreender o assunto. Era muito dificil.</i></div>
+<br>
+  <div><i>Nos primeiros dias nós tentamos ver por onde começarmos e tentamos ver um video do professor Arley explicando passo a passo de como hospedar o servidor e ter um banco de dados com perguntas e sistema de cadastro e login, mesmo observando era muito dificil pois o projeto dele demandava levemente alterados do que os nossos, e isso complicou na hora que organizar o nosso projeto.</i></div>
+<br>
+<div><i>Optamos por fazer o registro do banco junto com o modelo relacional para sabermos melhor o jeito que nós iamos trabalhar com o banco, isso foi uma parte positiva dessa sprint pelo motivo de temos conseguido trabalhar ainda mais em equipe resolvendo esses problemas juntos.</i></div>
+<br>
+<div><i>Em relação ao Github e ao gráfico burndown, seguiu basicamente a mesma coisa que as demais sprints, o Github organizado corretamente e o gráfico com grandes pausas porem finalizado com todos os pontos queimados, com os platôs que ficaram porque não tivemos dailys todos os dias, mostrando que ainda mantivemos a nossa consistência.</i></div>
+<br>
+<div><i>Foi muito complicado resolver todos esses problemas jogados em nós, mas com certeza foi nessa sprint que todos nós estavamos unidos para resolver de alguma maneira, todo mundo na mesma situação lutando para entender o objetivo, todos aqui trabalharam e ajudaram no projeto tanto na teoria quanto na pratica, igualmente.</i></div>
+<br>
+<div><i>A Conclusão é que foi extremamente dificil e até um ponto estressante, muitos desafios, e muitos obstáculos, mas nós tentamos dar o nosso melhor, cada um fazendo sua parte, e quando necessário todos se juntavam para ajeitar um problema ou resolver algo que alguém estava com dificuldade.</i></div>
 </h4>
