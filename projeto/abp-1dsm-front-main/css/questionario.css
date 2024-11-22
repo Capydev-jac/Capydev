@@ -1,0 +1,92 @@
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  height: 100vh;
+}
+
+#bar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 60px;
+  padding: 0px 10px;
+  z-index: 1000; /* Para garantir que o menu esteja acima de outros elementos */
+  border-bottom: 1px solid #aaa;
+  background-color: #ffe;
+  box-sizing: border-box;
+}
+
+.box {
+  display: flex;
+  flex-direction: column;
+  border-radius: 5px;
+  border: 1px solid #888;
+  padding: 20px;
+  margin: 20px 0px;
+}
+
+#saida,
+.questao {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+}
+
+.linha-enunciado {
+  display: flex;
+  text-align: justify;
+}
+
+.linha-alternativa {
+  display: flex;
+  flex-direction: row;
+  margin: 10px 0px;
+}
+
+.item-alternativa {
+  display: flex;
+
+  margin-right: 30px;
+}
+
+label {
+  font-size: 16px;
+  margin-left: 5px;
+}
+
+input {
+  width: 18px;
+  height: 18px;
+}
+
+a {
+  text-decoration: none;
+  color: #007bff;
+  font-weight: bold;
+}
+
+.botao {
+  background-color: #007bff;
+  border-radius: 5px;
+  padding: 5px 20px;
+  border: none;
+  color: #ffe;
+  font-size: 16px;
+  cursor: pointer;
+  margin: 0px 10px;
+}
+
+.botao:hover {
+  background-color: #0056b3; /* Cor de fundo ao passar o mouse */
+}
+
+.botao:active {
+  background-color: #0056b3; /* Cor de fundo ao clicar */
+}

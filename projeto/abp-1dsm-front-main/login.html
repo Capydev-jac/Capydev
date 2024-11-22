@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <title>Login</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="./css/login.css" />
+    <link rel="stylesheet" href="css/header.css" />
+    <link rel="stylesheet" href="css/login-signup.css" />
+    <link rel="stylesheet" href="css/profile.css" />
+    <link rel="stylesheet" href="css/footer.css" />
+    <link rel="stylesheet" href="css/articles.css" />
+    <link rel="stylesheet" href="css/quiz.css" />
+  </head>
+  <body>
+    <div class="box">
+      <h3>Login</h3>
+      <form id="form-login">
+        <div class="linha">
+          <label for="login-mail">E-mail</label>
+          <input type="email" id="login-mail" placeholder="Insira seu e-mail" required />
+        </div>
+        <div class="linha">
+          <label for="senha">Senha</label>
+          <input type="password" id="senha" placeholder="Insira sua senha" required />
+        </div>
+        <br />
+        <div>
+          <button type="submit">Logar</button> <!-- Agora o login é feito pelo submit do formulário -->
+          <a href="./cadastro.html"><button type="button">Inscreva-se</button></a>
+        </div>
+        <div class="msg-erro" id="login-msg-erro"></div> <!-- Mensagem de erro dinâmica -->
+      </form>
+    </div>
+
+    <script>
+      // Função para realizar login via POST
+      async function login(event) {
+        event.preventDefault();  // Impede o envio padrão do formulário
+
+        const email = document.getElementById("login-mail").value;
+        const senha = document.getElementById("senha").value;
+
+        // Validação simples dos campos
+        if (!email || !senha) {
+          document.getElementById("login-msg-erro").innerText = "Preencha todos os campos.";
+          return;
+        }
+
+        try {
+          // Faz a requisição POST para o servidor com os dados no corpo da requisição
+          const url = 'http://localhost:3000/login';  // URL da rota de login
+          const response = await fetch(url, {
+            method: 'POST',  // Método POST para login
+            headers: {
+              'Content-Type': 'application/json', // Define o tipo de conteúdo como JSON
+            },
+            body: JSON.stringify({ mail: email, senha: senha }) // Corpo da requisição com os dados
+          });
+
+          const data = await response.json();
+
+          if (response.ok && data.mensagem === "Login realizado com sucesso.") {
+            localStorage.setItem("Logado", true); // Armazena o logado no localStorage
+            localStorage.setItem("Mail", email); // Armazena o nome no localStorage
+            alert("Login realizado com sucesso!");
+            window.location.href = "01.html"; // Redireciona para a página principal
+          } else {
+            // Se o servidor retornar erro
+            document.getElementById("login-msg-erro").innerText = data.erro || "Erro ao realizar login. Verifique seus dados.";
+          }
+        } catch (error) {
+          console.error("Erro ao realizar login:", error);
+          document.getElementById("login-msg-erro").innerText = "Erro ao realizar login. Tente novamente mais tarde.";
+        }
+      }
+
+      // Adiciona o listener para o evento submit do formulário
+      document.getElementById("form-login").addEventListener("submit", login);
+    </script>
+  </body>
+</html>

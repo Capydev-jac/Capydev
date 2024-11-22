@@ -1,0 +1,148 @@
+/* estilos gerais */
+body {
+  background: linear-gradient(to bottom, var(--verde-claro-cor), var(--verde-cor));
+}
+
+header { /* header sticky somente pra paginas de conteudo, pra home page não ficaria legal */
+  position: sticky;
+  z-index: 3;
+  top: 0;
+}
+
+/* barra de navegação */
+.nav-bar {
+    position: fixed;
+    width: 50px;
+    height: 350px;
+    background-color: var(--marrom-cor);
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    /* centralizar a barra verticalmente */
+    left: 0%;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.nav-bar__circle {
+    --nav-bar__circle__width: 20px;
+    width: var(--nav-bar__circle__width);    
+    height: var(--nav-bar__circle__width);
+    border-radius: calc(var(--nav-bar__circle__width) / 2);
+    background-color: var(--branco-cor);
+}
+
+.nav-bar__circle--selected {
+   background-color: var(--verde-claro-cor);
+   transform: scale(1.5);
+}
+
+
+/* bloco de conteudo */
+main {
+    background-color: rgba(255, 255, 255, 0.5);
+    border: 2px solid var(--verde-escuro-cor);
+    padding-block: 24px;
+    padding-inline: clamp(16px, 4.131vw + 0.507px, 60px);
+    margin-inline: clamp(62px, 18.74vw - 59.811px, 300px); /* 1920px --> 650px */
+    margin-block: 40px;
+    font-size: clamp(1rem, 0.868rem + 0.5634vw, 1.375rem); /* 1440px --> 375px, 22px --> 16px */
+    text-align: justify;
+}
+
+/* estilo geral para imagens; mudar no próprio arquivo html para estilizações específicas */
+main picture {
+  width: clamp(310px, 17.84vw + 243.099px, 500px); /* 1440px --> 375px */
+  margin-inline: auto;
+  margin-block: 30px;
+  display: block;
+}
+
+main picture > img {
+  display: block;
+  width: 100%;
+}
+
+/* headers */
+main h1 {
+  color: var(--verde-escuro-cor);
+  text-align: center;
+  text-transform: uppercase;
+  margin-block-end: 20px;
+}
+
+/* margens negativas vão puxar o subtitulo pra esquerda, pra contrastar posicionalmente com o texto do parágrafo */
+main h2 {
+  color: var(--marrom-escuro-cor);
+  margin-block: 10px;
+  margin-inline-start: clamp(-5px, -1.033vw - 1.127px, -16px); /* 1440px --> 375px */
+}
+
+main h3 {
+  color: var(--marrom-cor);
+  margin-block: 8px;
+  margin-inline-start: -12px;
+}
+
+main h4 {
+  color: var(--marrom-claro-cor);
+  margin-block: 6px;
+  margin-inline-start: -10px;
+}
+
+
+/* parágrafos/hierarquia */
+/* subtopic-h2 é o bloco de conteúdo associado ao h2, subtopic-h3 ao h3, etc., vide estrutura do html */
+
+.subtopic-h3 {
+  padding-inline: 22px;
+}
+
+.subtopic-h4 {
+  padding-inline: 16px;
+}
+
+
+/* ---- estilização do quiz em quiz.css ---- */
+
+
+/* navegação alternativa por botões na parte inferior */
+.nav-alt {
+  display: flex;
+  justify-content: space-between;
+  padding-inline: clamp(15px, 1.408vw + 9.718px, 30px); /* 1440px --> 375px */
+  margin-block: clamp(20px, 1.878vw + 12.958px, 40px); /* 1440px --> 375px */
+}
+
+.nav-alt__previous, .nav-alt__next {
+  padding-block: 8px;
+  padding-inline: clamp(24px, 2.254vw + 15.549px, 48px); /* 1440px --> 375px */
+  color: var(--branco-cor);
+  background-color: var(--verde-escuro-cor);
+  font-size: clamp(17px, 0.094vw + 16.648px, 18px); /* 1440px --> 375px */
+  font-weight: 600;
+  border: none;
+  outline: none;
+  border-radius: 8px;
+  transform: all 0.2s ease-in-out;
+}
+
+.nav-alt__previous:hover, .nav-alt__next:hover {
+  cursor: pointer;
+  transform: scale(1.07);
+}
+
+/* responsividade */
+@media only screen and (max-width: 650px) {
+  .nav-bar {
+    display: none;
+  }
+
+  main {
+    margin: 0;
+    border: none;
+  }
+}
