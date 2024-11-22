@@ -3,9 +3,9 @@
 /* contas de teste */
 const accounts = [
   {
-    name: "João",
-    surname: "Silva",
-    email: "joao@fatec.sp.gov.br",
+    name: "Bruno",
+    surname: "Santos",
+    email: "brno@teste.com",
     password: "capydev",
     passedQuizzes: {
 
