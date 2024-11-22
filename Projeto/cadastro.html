@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastro de Usuário</title>
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="./css/login.css" />
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/login-signup.css">
+  <link rel="stylesheet" href="css/profile.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/articles.css">
+  <link rel="stylesheet" href="css/quiz.css">
+  <!-- dados -->
+</head>
+<body>
+  <h1>Cadastro de Usuário</h1>
+  <form id="formCadastro" method="POST">
+    <label for="mail">E-mail:</label>
+    <input type="email" id="mail" name="mail" required>
+    <br>
+    <label for="nome">Nome:</label>
+    <input type="text" id="nome" name="nome" required>
+    <br>
+    <label for="senha">Senha:</label>
+    <input type="password" id="senha" name="senha" required>
+    <br>
+    <button type="submit">Cadastrar</button>
+
+    <button type="button" onclick="window.location.href='login.html';">Home</button>
+  </form>
+
+  <div id="message"></div>
+  <script src="scripts/templates/login-signup-template.js"></script> <!-- Referência para o arquivo de script -->
+
+
+  <script>
+    // Função para enviar os dados do formulário para o servidor
+    document.getElementById('formCadastro').addEventListener('submit', async (event) => {
+      event.preventDefault(); // Impede o envio padrão do formulário
+
+      const mail = document.getElementById('mail').value;
+      const nome = document.getElementById('nome').value;
+      const senha = document.getElementById('senha').value;
+
+      const data = {
+        mail: mail,
+        nome: nome,
+        senha: senha
+      };
+
+      try {
+        const response = await fetch('http://localhost:3000/usuario', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(data),
+        });
+
+        const result = await response.json();
+
+        if (response.ok) {
+          document.getElementById('message').innerHTML = `<p>${result.mensagem}</p>`;
+        } else {
+          document.getElementById('message').innerHTML = `<p style="color: red;">${result.erro}</p>`;
+        }
+      } catch (error) {
+        document.getElementById('message').innerHTML = `<p style="color: red;">Erro ao cadastrar usuário: ${error.message}</p>`;
+      }
+    });
+  </script>
+</body>
+</html>
