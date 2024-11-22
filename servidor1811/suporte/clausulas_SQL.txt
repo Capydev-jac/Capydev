@@ -20,7 +20,7 @@ CREATE TABLE tbquestionario (
 );
 
 CREATE TABLE usuario (
-	idusuario serial not null,
+  idusuario serial not null,
   mail VARCHAR(30) NOT NULL,
   nome VARCHAR(45) NULL,
   sobre VARCHAR(45) NULL,
