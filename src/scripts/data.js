@@ -5,7 +5,7 @@ const accounts = [
   {
     name: "Bruno",
     surname: "Santos",
-    email: "brno@teste.com",
+    email: "bruno@teste.com",
     password: "capydev",
     passedQuizzes: {
 
