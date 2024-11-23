@@ -1,0 +1,8 @@
+PORTA = 3000
+DB_USER=postgres
+DB_PASSWORD=123
+DB_HOST=localhost
+DB_PORT=5432
+DB_NAME=postgres
+JWT_SECRET=987
+

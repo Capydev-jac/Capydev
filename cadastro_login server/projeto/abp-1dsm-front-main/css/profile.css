@@ -1,0 +1,119 @@
+/* estilo do overlay em login-signup.css */
+/* estilo do close-button em login-signup.css */
+
+/* profile component style */
+.profile-component {
+  position: fixed;
+  z-index: 5;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: clamp(320px, 12.207vw + 274.225px, 450px);
+  background-color: var(--branco-cor);
+  border-radius: 12px;
+  padding-block: 20px;
+  padding-inline: clamp(20px, 1.878vw + 12.958px, 40px);
+}
+
+.profile-component > picture {
+  display: block;
+  --pfp-width: 120px;
+  width: var(--pfp-width);
+  height: var(--pfp-width);
+  overflow: hidden;
+  border-radius: calc(var(--pfp-width) / 2);
+  margin-inline: auto;
+  margin-block-end: 10px;
+}
+
+.profile-component > picture > img {
+  display: block;
+  width: 100%;
+}
+
+.profile__name {
+  font-size: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-align: center;
+  color: var(--verde-escuro-cor);
+  font-weight: 800;
+  margin-block-end: 15px;
+}
+
+.profile__message {
+  font-weight: 500;
+  font-size: 16px;
+  margin-block: 18px;
+  text-align: justify;
+  color: var(--verde-cor);
+}
+
+.profile__quizReport {
+  text-align: center;
+  margin-block-end: 15px;
+}
+
+.profile__quizReport > li {
+  text-align: center;
+}
+
+.profile__quizReport > li > span {
+  font-size: 15px;
+}
+
+.profile-component button {
+  display: block;
+  transition: all 0.2s ease-in-out;
+  border: none;
+  outline: none;
+}
+
+.profile-component button:hover {
+  transform: scale(1.07); 
+  cursor: pointer;
+}
+
+.profile-component button:focus { /* acessibilidade */
+  border: 1px outset slategray;
+}
+
+.profile__certificate {
+  padding: 8px 40px; 
+  border-radius: 8px;
+  background-color: var(--verde-cor);
+  font-size: 18px;
+  color: var(--branco-cor);
+  font-weight: 700;
+  margin-inline: auto;
+  margin-block-end: 40px;
+}
+
+.profile__certificate--disabled {
+  background-color: slategray;
+  pointer-events: none;
+}
+
+.profile__certificate:hover {
+  background-color: var(--verde-escuro-cor);
+}
+
+.profile__account-actions {
+  display: flex;
+  justify-content: space-between;
+}
+
+.profile__logoff, .profile__delete {
+  font-size: 15px;
+  color: red;
+  font-weight: 700;
+  background-color: transparent;
+}
+
+.profile__logoff {
+  margin-inline-start: -3px;
+}
+
+.profile__logoff {
+  margin-inline-end: -10px;
+}

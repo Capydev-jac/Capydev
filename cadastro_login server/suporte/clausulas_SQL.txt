@@ -1,0 +1,95 @@
+DROP TABLE IF EXISTS tbquestao_por_questionario;
+DROP TABLE IF EXISTS tbquestionario;
+DROP TABLE IF EXISTS tbquestao;
+DROP TABLE IF EXISTS tbusuario;
+
+CREATE TABLE tbusuario (
+  idusuario SERIAL NOT NULL,
+  nome VARCHAR(40) NOT NULL,
+  mail VARCHAR(40) NOT NULL,
+  PRIMARY KEY(idusuario)
+);
+
+CREATE TABLE tbquestao (
+  idquestao SERIAL NOT NULL,
+  enunciado VARCHAR(1000) NOT NULL,
+  resposta BOOL NULL,
+  PRIMARY KEY(idquestao)
+);
+
+CREATE TABLE tbquestionario (
+  idquestionario SERIAL NOT NULL,
+  idusuario INTEGER  NOT NULL,
+  datahorario TIMESTAMP DEFAULT NOW() NOT NULL,
+  nota FLOAT NULL,
+  PRIMARY KEY(idquestionario),
+  FOREIGN KEY(idusuario)
+    REFERENCES tbusuario(idusuario)
+      ON DELETE CASCADE
+      ON UPDATE CASCADE
+);
+
+CREATE TABLE tbquestao_por_questionario (
+  idquestao INTEGER  NOT NULL,
+  idquestionario INTEGER NOT NULL,
+  resposta BOOL NOT NULL,
+  PRIMARY KEY(idquestao, idquestionario),
+  FOREIGN KEY(idquestao)
+    REFERENCES tbquestao(idquestao)
+      ON DELETE NO ACTION
+      ON UPDATE NO ACTION,
+  FOREIGN KEY(idquestionario)
+    REFERENCES tbquestionario(idquestionario)
+      ON DELETE CASCADE
+      ON UPDATE CASCADE
+);
+
+INSERT INTO tbquestao (enunciado, resposta) 
+VALUES
+('Uma variável é um espaço na memória do computador?', true),
+('O tipo de dado é o conteúdo da variável?', false),
+('Os tipos de dados podem ser primitivos ou objetos?', true),
+('Na estrutura decisão if...else o bloco if pode existir sem o bloco else?', true ),
+('Na estrutura decisão if...else o bloco else pode existir sem o bloco if?', false),
+('A estrutura de decisão if...else pode ser aninhada dentro de um bloco if ou else?', true),
+('Uma estrutura de repetição for pode ser usada quando o número de iterações é desconhecido?', false),
+('O loop do...while executa o bloco de código pelo menos uma vez, mesmo se a condição for inicialmente falsa?', true),
+('Em uma estrutura de repetição while, o bloco de código é executado enquanto a condição especificada for falsa?', false),
+('Um array é uma estrutura de dados capaz de manter vários conteúdo', true),
+('No JavaScript o índice da primeira posição de um array é zero',true),
+('No JavaScript a propriedade size é usada para ler a quantidade de elementos do array',false),
+('No Javacript um array é definido usando um par de chaves', false),
+('Um objeto JSON (JavaScript Objetc Notation) é definido usando um par de colchetes', false),
+('Um objeto JSON é formado elementos acessíveis através de índices de posição', false),
+('Um objeto JSON é formado por propriedades', true),
+('Uma propriedade de um objeto JSON é formado pela chave:valor', true),
+('Uma propriedade de um objeto JSON é formado pela chave:valor, onde o valor pode ser qualquer tipo de dado', true),
+('A instrução const {nome} = obj é usada para desestruturar a propriedade nome do objeto JSON que está na variável obj', true),
+('A instrução const {nome:name} = obj é usada para desestruturar a propriedade nome do objeto JSON que está na variável obj e colocar numa variável de nome name', true),
+('A instrução const {pessoa:{nome}} = obj é usada para desestruturar a propridade nome que está dento de um objeto da propriedade pessoa', true),
+('Na instrução const [x,y]=[10,20,30,40] x e y são variávies que recebem os valores 30 e 40, respectivamente', false),
+('Na instrução let [,y]=[10,20,30,40] a variável y recebe o valor 20', false),
+('Na instrução let {,y}=[10,20,30,40] a variável y recebe o valor 20', false),
+('A variável k recebeu um objeto na atribuição let k = {} ', true),
+('A variável obj recebeu um objeto na atribuição const obj = {10,20,30,40} ', false),
+('A variável obj recebeu um array na atribuição const obj =[nome:"Ana",idade:20]', false),
+('Um objeto na notação JSON é denominado por um par de chaves', true),
+('Um array é denominado por um par de colchetes', true),
+('Um array em JavaScript é uma estrutura de dados utilizada para armazenar uma coleção de elementos, que podem ser de qualquer tipo, como números, strings, objetos ou até mesmo outros arrays', true),
+('Um array pode ser declarado usando colchetes [] ou o construtor Array', true),
+('Os elementos de um array são acessados por meio de índices, que começam em zero', true),
+('Arrays em JavaScript possuem várias propriedades e métodos úteis. A propriedade length retorna o número de elementos no array', true),
+('Arrays em JavaScript possuem várias propriedades e métodos úteis. O método push adiciona um ou mais elementos ao final do array', true),
+('Arrays em JavaScript possuem várias propriedades e métodos úteis. O método pop remove o último elemento do array', true),
+('Arrays em JavaScript possuem várias propriedades e métodos úteis. O método shift desloca o primeiro elemento do array', false),
+('Arrays são uma parte fundamental da programação em JavaScript e fornecem uma maneira flexível e eficiente de trabalhar com coleções de dados. Compreender como declarar, acessar e manipular arrays é essencial para o desenvolvimento de aplicações robustas e eficientes', true),
+('Um objeto JSON (JavaScript Object Notation) é um formato de texto leve e de fácil leitura utilizado para a troca de dados entre sistemas e para armazenar informações de forma estruturada. JSON é baseado em um subconjunto da linguagem de programação JavaScript, mas é independente de linguagem, sendo amplamente utilizado em diversas linguagens de programação para representar e transmitir dados.', true),
+('Um objeto JSON é composto por pares chave-valor, onde as chaves são strings (sempre entre aspas duplas) e os valores podem ser strings, números, objetos, arrays, valores booleanos (true ou false) ou null', true),
+('No JavaScript, é comum trabalhar com JSON para enviar e receber dados de servidores', true);
+
+INSERT INTO tbusuario (nome, mail) 
+VALUES
+('Maria Silva','maria@teste.com'),
+('Lucas Garcia','lucas@teste.com'),
+('Ana Maria Souza','ana@teste.com'),
+('João Bosco','joao@teste.com');
